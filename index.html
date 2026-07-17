@@ -639,7 +639,7 @@ fetch("catalog.json")
     $("contactLink").href = reportHref("Allgemein");
     $("layout").hidden = false;
 
-    ["q","rad","bp","bg","gs","env","tier","sun","acc","free","sort"].forEach(id => {
+    ["q","rad","bp","bg","gs","env","tier","dur","sun","acc","free","sort"].forEach(id => {
       $(id).addEventListener("input", apply);
       $(id).addEventListener("change", apply);
     });
