@@ -16,11 +16,47 @@ Es wird nichts gespeichert und nichts übertragen.
 | Datei | Zweck |
 |---|---|
 | `index.html` | komplette Website (Layout, Filter, Ampellogik) – ohne Build-Step |
-| `catalog.json` | **die einzige Datenquelle**: alle Einträge, Quellen und Prüfdaten |
+| `catalog.json` | **die Datenquelle**: alle Einträge, Quellen und Prüfdaten |
+| `events.json` | kuratierte, zeitlich begrenzte Hinweise (laufen automatisch ab) |
 | `README.md` | dieses Dokument |
 
-Eine inhaltliche Änderung ist immer eine Änderung an `catalog.json`.
+Eine inhaltliche Änderung ist immer eine Änderung an `catalog.json` oder `events.json`.
 `index.html` muss dafür nicht angefasst werden.
+
+### Funktionen der Website
+
+- **Suche**: mehrere Suchwörter (UND-Verknüpfung), umlaut-tolerant („kappele“ findet „Käppele“),
+  durchsucht Titel, Ort, Typ, Beschreibung und Vorbereitungshinweise.
+- **Filter**: Entfernung (Slider bis 120 km), Ausflugsstufe (Stadt ≤ 5 km / Umkreis ≤ 15 km /
+  Tagesausflug ≤ 50 km / **Fernziel > 50 km** / Vorlagen), Themen-Chips (Mehrfachauswahl),
+  verfügbare Zeit, Umgebung, „nur sonntags bestätigt / stufenfrei / kostenlos“.
+- **Ampel**: rechnet clientseitig gegen Budget pro Person, Budget pro Gruppe und Gruppengröße.
+- **Anpassung**: alle Einstellungen werden automatisch **lokal im Browser** gespeichert
+  (localStorage, ohne Konto) und beim nächsten Besuch wiederhergestellt. Ein geteilter
+  Link (URL-Hash) hat Vorrang vor gespeicherten Einstellungen.
+- **Ticket-Links**: Einträge mit `booking_url` zeigen einen „Tickets & Buchung“-Button
+  (z. B. experimenta Heilbronn, PLAYMOBIL-FunPark, Wildpark Bad Mergentheim).
+
+### Events pflegen (`events.json`)
+
+Zeitlich begrenzte Hinweise (Feste, Sonderöffnungen, Sonderausstellungen) kommen in
+`events.json`. Jeder Eintrag **muss** ein `valid_until` (ISO-Datum) haben – danach
+blendet die Website ihn automatisch aus; es kann also nie ein abgelaufenes Event
+öffentlich stehen bleiben. Beispiel:
+
+```json
+{
+  "title": "Fränkisches Weinfest",
+  "locality": "Volkach",
+  "date_text": "14.–18. August 2026",
+  "valid_until": "2026-08-18",
+  "url": "https://www.volkach.de/",
+  "note": "Sonntags gut besucht; Anreise früh planen."
+}
+```
+
+Die „Aktuelles“-Box verlinkt zusätzlich dauerhaft auf die offiziellen
+Veranstaltungskalender (Stadt, Landkreis, Frankentourismus) – die brauchen keine Pflege.
 
 ## Lokal testen
 
@@ -75,8 +111,9 @@ Das Vier-Augen-Prinzip läuft über Git, nicht über Anwendungscode:
    Einträge werden also sichtbar, nicht versteckt.
 5. **Neuer Eintrag:** Einen bestehenden Block in `catalog.json` kopieren, alle Felder
    ausfüllen (`distance_from_wuerzburg_km` = einfache Straßenkilometer ab Würzburg Hbf,
-   `null` für ortsunabhängige Vorlagen; Beträge in Cent). Optional `booking_url` für
-   einen direkten Ticket-/Buchungslink.
+   ca.-Werte zulässig, `null` für ortsunabhängige Vorlagen; Beträge in Cent). Optional
+   `booking_url` für einen direkten Ticket-/Buchungslink. Fernziele über 50 km sind
+   ausdrücklich erlaubt und erscheinen als eigene Stufe „Fernziel“.
 6. **Grundsätze:** Keine Personendaten, keine Wohn- oder Gruppenadressen, keine
    Eignungsaussagen über einzelne Personen. Unsicherheit wird nie als „Passt“
    dargestellt – im Zweifel `derived`/`unknown` lassen und die Ampel entscheiden lassen.

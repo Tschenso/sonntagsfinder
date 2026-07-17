@@ -155,6 +155,18 @@
   .preset { appearance:none; border:1px solid var(--line-2); background:var(--surface); color:var(--ink-2); font:inherit; font-size:.8rem; font-weight:650; padding:.35rem .7rem; border-radius:999px; cursor:pointer; }
   .preset:hover { background:var(--accent-soft); border-color:var(--accent); color:var(--accent-2); }
 
+  .theme-chips { display:flex; flex-wrap:wrap; gap:.4rem; }
+  .tchip { appearance:none; border:1px solid var(--line-2); background:var(--surface); color:var(--ink-2); font:inherit; font-size:.78rem; font-weight:650; padding:.3rem .65rem; border-radius:999px; cursor:pointer; }
+  .tchip[aria-pressed="true"] { background:var(--accent); border-color:var(--accent); color:#fff; }
+  @media (prefers-color-scheme: dark){ .tchip[aria-pressed="true"] { color:#08110c; } }
+  :root[data-theme="dark"] .tchip[aria-pressed="true"] { color:#08110c; }
+  :root[data-theme="light"] .tchip[aria-pressed="true"] { color:#fff; }
+
+  .news { background:var(--surface); border:1px solid var(--line); border-left:5px solid var(--sun); border-radius:var(--r); padding:.9rem 1.15rem; margin-bottom:1.2rem; display:grid; gap:.5rem; font-size:.86rem; }
+  .news h2 { margin:0; font-size:1rem; }
+  .news ul { margin:0; padding-left:1.1rem; display:grid; gap:.3rem; }
+  .news .links { display:flex; flex-wrap:wrap; gap:.4rem .9rem; font-size:.8rem; }
+
   .loaderr { max-width:640px; margin:3rem auto; padding:1.2rem 1.4rem; border:1px solid var(--line); border-left:5px solid var(--no); border-radius:var(--r); background:var(--surface); font-size:.92rem; }
   .loaderr code { background:var(--surface-2); padding:.1rem .4rem; border-radius:5px; }
 
@@ -219,6 +231,7 @@
         <button type="button" class="preset" data-p="frei">🆓 Kostenlos draußen</button>
         <button type="button" class="preset" data-p="barriere">♿ Barrierearm</button>
         <button type="button" class="preset" data-p="stadt">🏙 In der Stadt</button>
+        <button type="button" class="preset" data-p="fern">🚌 Fernziel-Tag</button>
       </div>
       <div class="field">
         <label for="q">Suche</label>
@@ -226,8 +239,8 @@
       </div>
       <div class="field">
         <label for="rad">Max. Entfernung ab Würzburg</label>
-        <div class="rng"><input type="range" id="rad" min="0" max="50" step="1" value="50"><output id="radOut">50 km</output></div>
-        <span class="hint">Straßenentfernung ab Hauptbahnhof. Ortsunabhängige Vorlagen bleiben immer sichtbar.</span>
+        <div class="rng"><input type="range" id="rad" min="0" max="120" step="5" value="120"><output id="radOut">120 km</output></div>
+        <span class="hint">Straßenentfernung ab Hauptbahnhof (ca.-Werte). Ortsunabhängige Vorlagen bleiben immer sichtbar.</span>
       </div>
       <div class="field">
         <label for="tier">Ausflugsstufe</label>
@@ -236,8 +249,31 @@
           <option value="stadt">Stadt (bis ca. 5 km)</option>
           <option value="umkreis">Umkreis (bis ca. 15 km)</option>
           <option value="tagesausflug">Tagesausflug (bis 50 km)</option>
+          <option value="fern">Fernziel (über 50 km)</option>
           <option value="vorlage">Ortsunabhängige Vorlagen</option>
         </select>
+      </div>
+      <div class="field">
+        <span style="font-size:.85rem;font-weight:650">Themen</span>
+        <div class="theme-chips" role="group" aria-label="Themenfilter (Mehrfachauswahl)">
+          <button type="button" class="tchip" data-t="museum" aria-pressed="false">Museum &amp; Kultur</button>
+          <button type="button" class="tchip" data-t="natur" aria-pressed="false">Natur &amp; Tiere</button>
+          <button type="button" class="tchip" data-t="wandern" aria-pressed="false">Wege &amp; Aussicht</button>
+          <button type="button" class="tchip" data-t="bewegung" aria-pressed="false">Bewegung &amp; Wasser</button>
+          <button type="button" class="tchip" data-t="wissen" aria-pressed="false">Wissenschaft</button>
+        </div>
+        <span class="hint">Mehrfachauswahl möglich; leer = alle Themen.</span>
+      </div>
+      <div class="field">
+        <label for="dur">Verfügbare Zeit</label>
+        <select id="dur">
+          <option value="">Egal</option>
+          <option value="90">bis 1,5 Stunden</option>
+          <option value="120">bis 2 Stunden</option>
+          <option value="180">bis 3 Stunden</option>
+          <option value="240">bis 4 Stunden</option>
+        </select>
+        <span class="hint">Zeigt Aktivitäten, deren Mindestdauer in Ihre Zeit passt.</span>
       </div>
       <div class="row2">
         <div class="field">
@@ -269,9 +305,19 @@
         <label class="chk"><input type="checkbox" id="free"> Nur kostenlose Angebote</label>
       </div>
       <button type="button" class="reset" id="reset">Filter zurücksetzen</button>
+      <span class="hint">Ihre Einstellungen bleiben nur lokal in diesem Browser gespeichert – ohne Konto, ohne Übertragung.</span>
     </form>
 
     <section id="results" aria-live="polite">
+      <div class="news" id="news">
+        <h2>Aktuelles rund um den Sonntag</h2>
+        <ul id="newsList" hidden></ul>
+        <div class="links">
+          <a href="https://www.wuerzburg.de/tourismus/" rel="noopener" target="_blank">Stadt Würzburg – Tourismus &amp; Veranstaltungen ↗</a>
+          <a href="https://www.landkreis-wuerzburg.de/" rel="noopener" target="_blank">Landkreis Würzburg – Freizeit ↗</a>
+          <a href="https://www.frankentourismus.de/" rel="noopener" target="_blank">Frankentourismus ↗</a>
+        </div>
+      </div>
       <div class="explain">
         <h2>So lesen Sie die Ampel</h2>
         <div class="legend">
@@ -294,6 +340,8 @@
         <select id="sort">
           <option value="fit">Beste Passung zuerst</option>
           <option value="dist">Nächste zuerst</option>
+          <option value="price">Günstigste zuerst</option>
+          <option value="short">Kürzeste zuerst</option>
           <option value="az">A–Z</option>
         </select>
       </div>
@@ -309,7 +357,7 @@
     <p>Der Sonntagsfinder ist eine offene, redaktionell gepflegte Sammlung. Er entscheidet <b>nicht</b>, ob ein Ausflug für eine bestimmte Person oder Gruppe pädagogisch, gesundheitlich oder aufsichtlich geeignet ist – das bleibt eure Verantwortung. Es werden keine Konten, keine Standort- und keine Personendaten erhoben.</p>
     <p class="disclaimer"><b>Immer vor der Abfahrt prüfen:</b> Öffnung, Preis, Zugang und Rückfahrt können sich kurzfristig ändern. Die verlinkte Quelle und das Prüfdatum sind maßgeblich – die Ampel ist nur eine schnelle Vorabhilfe.</p>
     <p>Kartendaten &amp; Entfernungen basieren u. a. auf © <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap-Mitwirkende (ODbL)</a>. Fehlt etwas oder ist eine Angabe veraltet? <a id="contactLink" href="#">Info melden</a>.</p>
-    <p style="color:var(--muted)" id="versionLine">Offene Ressource · Filter lassen sich als Link teilen (Adresszeile kopieren) · Seite ist druckfähig (aktuelle Ergebnisliste).</p>
+    <p style="color:var(--muted)" id="versionLine">Offene Ressource · Filter lassen sich als Link teilen (Adresszeile kopieren) · Einstellungen bleiben lokal im Browser.</p>
   </div>
 </footer>
 
@@ -340,8 +388,21 @@ const SUN = {confirmed:"bestätigt",derived:"abgeleitet",seasonal:"saisonal",unk
 const ENV = {indoor:"Drinnen",outdoor:"Draußen",mixed:"Gemischt"};
 const SRC = {official:"Offizielle Quelle",derived:"Redaktionell abgeleitet",conflict:"Quellenkonflikt",stale:"Quelle überfällig",internal:"Interne Vorlage"};
 const AMP = {ok:"Passt", check:"Vorher prüfen", no:"Passt nicht"};
-function tierKey(d){ return d <= 5 ? "stadt" : d <= 15 ? "umkreis" : "tagesausflug"; }
-const TIER = {stadt:"Stadt", umkreis:"Umkreis", tagesausflug:"Tagesausflug"};
+function tierKey(d){ return d <= 5 ? "stadt" : d <= 15 ? "umkreis" : d <= 50 ? "tagesausflug" : "fern"; }
+const TIER = {stadt:"Stadt", umkreis:"Umkreis", tagesausflug:"Tagesausflug", fern:"Fernziel"};
+
+/* Suche: klein, ohne Diakritika, ß→ss – "kappele" findet "Käppele" */
+function norm(s){ return (s||"").toLowerCase().replace(/ß/g,"ss").normalize("NFD").replace(/[̀-ͯ]/g,""); }
+
+/* Themen als Prädikate über den Aktivitätstyp – Mehrfachauswahl, ODER-Logik */
+const THEMES = {
+  museum:   it => /museum|kunst|geschichte|schloss|antike|bibliothek|kultur|stadtrundgang/i.test(it.ty),
+  natur:    it => /wald|natur|garten|park|lehrpfad|stadtnatur|landwirtschaft|tierpark|wildpark|naturweg/i.test(it.ty),
+  wandern:  it => /wanderung|spaziergang|pfad|weg|runde|aussicht/i.test(it.ty),
+  bewegung: it => /bewegung|schwimmen|skate|freizeitpark|badesee|parkour/i.test(it.ty),
+  wissen:   it => /wissenschaft|astronomie|mineralog|mitmach|experiment/i.test(it.ty)
+};
+const activeThemes = new Set();
 function worst(a,b){ const rank={ok:0,check:1,no:2}; return rank[a]>=rank[b]?a:b; }
 
 function reportHref(title){
@@ -468,6 +529,7 @@ function readFilters(){
     gs: Math.max(1, +$("gs").value || 1),
     env: $("env").value,
     tier: $("tier").value,
+    dur: $("dur").value,
     sunOnly: $("sun").checked,
     accOnly: $("acc").checked,
     freeOnly: $("free").checked,
@@ -481,8 +543,14 @@ function apply(){
 
   let rows = DATA.map(it => ({it, ev: evaluate(it, f)}));
   rows = rows.filter(({it}) => {
-    if (f.q && !(it.t+" "+it.loc+" "+it.ty+" "+it.sum).toLowerCase().includes(f.q)) return false;
+    if (f.q){
+      const hay = norm(it.t+" "+it.loc+" "+it.ty+" "+it.sum+" "+it.prep+" "+it.planB);
+      const toks = norm(f.q).split(/\s+/).filter(Boolean);
+      if (!toks.every(tk => hay.includes(tk))) return false;
+    }
     if (f.env && it.env !== f.env) return false;
+    if (f.dur && it.dmin > +f.dur) return false;
+    if (activeThemes.size && ![...activeThemes].some(t => THEMES[t] && THEMES[t](it))) return false;
     if (f.tier){
       if (f.tier === "vorlage"){ if (it.dist != null) return false; }
       else { if (it.dist == null || tierKey(it.dist) !== f.tier) return false; }
@@ -496,6 +564,11 @@ function apply(){
   const rank = {ok:0,check:1,no:2};
   rows.sort((a,b) => {
     if (f.sort === "az") return a.it.t.localeCompare(b.it.t,"de");
+    if (f.sort === "price"){
+      const pa = a.it.cpp==null?999999:a.it.cpp, pb = b.it.cpp==null?999999:b.it.cpp;
+      return pa-pb;
+    }
+    if (f.sort === "short") return a.it.dmin - b.it.dmin;
     if (f.sort === "dist"){
       const da = a.it.dist==null?9999:a.it.dist, db = b.it.dist==null?9999:b.it.dist;
       return da-db;
@@ -514,22 +587,25 @@ function apply(){
   writeHash(f);
 }
 
-/* ---------- Teilbare Filter-Links (nur Einstellungswerte, keine Personendaten) ---------- */
-const DEF = {q:"",rad:"50",bp:"10",bg:"120",gs:"8",env:"",tier:"",sun:"0",acc:"0",free:"0",sort:"fit"};
-function writeHash(f){
-  try {
-    const cur = {q:f.q, rad:String(f.maxRad), bp:String(f.bp), bg:String(f.bg), gs:String(f.gs),
-                 env:f.env, tier:f.tier, sun:f.sunOnly?"1":"0", acc:f.accOnly?"1":"0", free:f.freeOnly?"1":"0", sort:f.sort};
-    const p = new URLSearchParams();
-    for (const k in cur) if (cur[k] !== DEF[k]) p.set(k, cur[k]);
-    const s = p.toString();
-    history.replaceState(null, "", s ? "#" + s : location.pathname + location.search);
-  } catch(e){}
+/* ---------- Teilbare Filter-Links + lokale Speicherung (nur Einstellungswerte, keine Personendaten) ---------- */
+const DEF = {q:"",rad:"120",bp:"10",bg:"120",gs:"8",env:"",tier:"",dur:"",t:"",sun:"0",acc:"0",free:"0",sort:"fit"};
+function serialize(f){
+  const cur = {q:f.q, rad:String(f.maxRad), bp:String(f.bp), bg:String(f.bg), gs:String(f.gs),
+               env:f.env, tier:f.tier, dur:f.dur, t:[...activeThemes].join(","),
+               sun:f.sunOnly?"1":"0", acc:f.accOnly?"1":"0", free:f.freeOnly?"1":"0", sort:f.sort};
+  const p = new URLSearchParams();
+  for (const k in cur) if (cur[k] !== DEF[k]) p.set(k, cur[k]);
+  return p.toString();
 }
-function readHash(){
-  if (!location.hash || location.hash.length < 2) return;
+function writeHash(f){
+  const s = serialize(f);
+  try { history.replaceState(null, "", s ? "#" + s : location.pathname + location.search); } catch(e){}
+  try { localStorage.setItem("sf-state", s); } catch(e){}
+}
+function readState(str){
+  if (!str) return;
   try {
-    const p = new URLSearchParams(location.hash.slice(1));
+    const p = new URLSearchParams(str);
     if (p.has("q")) $("q").value = p.get("q");
     if (p.has("rad")) $("rad").value = p.get("rad");
     if (p.has("bp")) $("bp").value = p.get("bp");
@@ -537,6 +613,12 @@ function readHash(){
     if (p.has("gs")) $("gs").value = p.get("gs");
     if (p.has("env")) $("env").value = p.get("env");
     if (p.has("tier")) $("tier").value = p.get("tier");
+    if (p.has("dur")) $("dur").value = p.get("dur");
+    if (p.has("t")){
+      activeThemes.clear();
+      p.get("t").split(",").filter(Boolean).forEach(x => { if (THEMES[x]) activeThemes.add(x); });
+      document.querySelectorAll(".tchip").forEach(b => b.setAttribute("aria-pressed", activeThemes.has(b.dataset.t) ? "true" : "false"));
+    }
     if (p.has("sun")) $("sun").checked = p.get("sun") === "1";
     if (p.has("acc")) $("acc").checked = p.get("acc") === "1";
     if (p.has("free")) $("free").checked = p.get("free") === "1";
@@ -553,7 +635,7 @@ fetch("catalog.json")
     $("cntS").textContent = (cat.activities || []).reduce((n,a)=>n+((a.sources||[]).length),0);
     $("cntV").textContent = cat.catalog_version || "–";
     $("versionLine").textContent = "Katalogversion " + (cat.catalog_version || "?") +
-      " · offene Ressource · Filter lassen sich als Link teilen (Adresszeile kopieren) · Seite ist druckfähig.";
+      " · offene Ressource · Filter lassen sich als Link teilen (Adresszeile kopieren) · Einstellungen bleiben lokal im Browser.";
     $("contactLink").href = reportHref("Allgemein");
     $("layout").hidden = false;
 
@@ -562,8 +644,11 @@ fetch("catalog.json")
       $(id).addEventListener("change", apply);
     });
     $("reset").addEventListener("click", () => {
-      $("q").value=""; $("rad").value=50; $("bp").value=10; $("bg").value=120; $("gs").value=8;
-      $("env").value=""; $("tier").value=""; $("sun").checked=false; $("acc").checked=false; $("free").checked=false; $("sort").value="fit";
+      $("q").value=""; $("rad").value=120; $("bp").value=10; $("bg").value=120; $("gs").value=8;
+      $("env").value=""; $("tier").value=""; $("dur").value=""; $("sun").checked=false; $("acc").checked=false; $("free").checked=false; $("sort").value="fit";
+      activeThemes.clear();
+      document.querySelectorAll(".tchip").forEach(b => b.setAttribute("aria-pressed","false"));
+      try { localStorage.removeItem("sf-state"); } catch(e){}
       apply();
     });
     document.querySelectorAll(".preset").forEach(b => b.addEventListener("click", () => {
@@ -572,13 +657,41 @@ fetch("catalog.json")
       if (p === "frei"){ $("free").checked = true; $("env").value = "outdoor"; }
       if (p === "barriere"){ $("acc").checked = true; }
       if (p === "stadt"){ $("tier").value = "stadt"; }
+      if (p === "fern"){ $("tier").value = "fern"; }
+      apply();
+    }));
+    document.querySelectorAll(".tchip").forEach(b => b.addEventListener("click", () => {
+      const t = b.dataset.t;
+      if (activeThemes.has(t)) activeThemes.delete(t); else activeThemes.add(t);
+      b.setAttribute("aria-pressed", activeThemes.has(t) ? "true" : "false");
       apply();
     }));
 
-    readHash();
+    /* Wiederherstellen: geteilter Link (Hash) gewinnt vor lokal gespeicherten Einstellungen */
+    if (location.hash && location.hash.length > 1) readState(location.hash.slice(1));
+    else { let s = ""; try { s = localStorage.getItem("sf-state") || ""; } catch(e){} readState(s); }
     apply();
   })
   .catch(() => { $("loaderr").hidden = false; });
+
+/* ---------- Aktuelles: kuratierte, zeitlich begrenzte Hinweise aus events.json ----------
+   Abgelaufene Einträge (valid_until < heute) werden automatisch ausgeblendet. */
+fetch("events.json")
+  .then(r => r.ok ? r.json() : null)
+  .then(ev => {
+    if (!ev || !Array.isArray(ev.events)) return;
+    const live = ev.events
+      .filter(e => e.valid_until && e.valid_until >= TODAY)
+      .sort((a,b) => (a.valid_until||"").localeCompare(b.valid_until||""));
+    if (!live.length) return;
+    const ul = document.getElementById("newsList");
+    ul.innerHTML = live.map(e =>
+      `<li><b>${esc(e.title)}</b>${e.locality?` · ${esc(e.locality)}`:""}${e.date_text?` · ${esc(e.date_text)}`:""}` +
+      `${e.url?` · <a href="${esc(e.url)}" rel="noopener" target="_blank">Details ↗</a>`:""}` +
+      `${e.note?`<br>${esc(e.note)}`:""}</li>`).join("");
+    ul.hidden = false;
+  })
+  .catch(() => {});
 </script>
 </body>
 </html>

@@ -1,0 +1,5 @@
+{
+  "schema_version": 1,
+  "note": "Kuratierte, zeitlich begrenzte Hinweise (Sonderöffnungen, Feste, Sonderausstellungen). Jeder Eintrag braucht valid_until (ISO-Datum) – abgelaufene Einträge blendet die Website automatisch aus. Felder: title, locality, date_text, valid_until, url, note. Beispiel siehe README.",
+  "events": []
+}
