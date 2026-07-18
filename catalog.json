@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "catalog_version": "2026-07-18.1",
+  "catalog_version": "2026-07-18.2",
   "note": "Öffentlicher Katalog des Sonntagsfinders Würzburg. Basis: redaktioneller Basiskatalog v1 (2026-07-15.1, 30 Einträge) plus 9 neue Einträge vom 2026-07-17 (6 regionale, 3 Fernziele mit booking_url). Änderungen bitte per Pull-Request, siehe README.",
   "activities": [
     {
@@ -701,25 +701,25 @@
       "distance_from_wuerzburg_km": 15.0,
       "cost_status": "known",
       "cost_per_person_cents": 600,
-      "additional_costs": "Kinder- und Gruppentarife getrennt prüfen.",
-      "cost_valid_until": "2026-07-22",
+      "additional_costs": "Kinder 3–16 Jahre 4 €; Gruppen ab 10 Personen: Erwachsene 5,50 €, Kinder 3,50 €; Familienkarte 16 €.",
+      "cost_valid_until": "2026-10-16",
       "sunday_status": "confirmed",
-      "sunday_text": "Sonntags geöffnet; saisonale Tageszeiten beachten.",
+      "sunday_text": "Täglich auch sonn- und feiertags: April–Oktober 10–18 Uhr (Einlass bis 17), November–März 11–17 Uhr.",
       "environment": "outdoor",
       "duration_min": 120,
       "duration_max": 240,
       "booking_required": false,
       "step_free": null,
       "accessibility_text": "Einzelne Angebote stufenfrei; der gesamte Parkweg ist nicht ausreichend belegt.",
-      "preparation_text": "Aktuelle Teilbereichssperrungen, Wetter, Wege und Tarife kurzfristig prüfen.",
+      "preparation_text": "Aktuelle Betreiberhinweise, Wetter, Wege und Tarife kurzfristig prüfen.",
       "plan_b": "Shalom Europa, MiK oder Jüdisches Kulturmuseum.",
-      "pre_departure_checks": ["Sperrungen innerhalb einer Woche prüfen", "Wetter und Wege prüfen", "Tarife und Parkregeln bestätigen"],
-      "source_checked_on": "2026-07-15",
-      "next_review_on": "2026-07-22",
+      "pre_departure_checks": ["Aktuelle Betreiberhinweise prüfen", "Wetter und Wege prüfen", "Tarife und Parkregeln bestätigen"],
+      "source_checked_on": "2026-07-18",
+      "next_review_on": "2026-10-16",
       "booking_url": null,
       "sources": [
-        {"url": "https://tierparksommerhausen.de/tierpark/preise-oeffnungszeiten", "publisher": "Tierpark Sommerhausen", "status": "official", "checked_on": "2026-07-15"},
-        {"url": "https://tierparksommerhausen.de/", "publisher": "Tierpark Sommerhausen", "status": "official", "checked_on": "2026-07-15"}
+        {"url": "https://tierparksommerhausen.de/tierpark/preise-oeffnungszeiten", "publisher": "Tierpark Sommerhausen", "status": "official", "checked_on": "2026-07-18"},
+        {"url": "https://tierparksommerhausen.de/", "publisher": "Tierpark Sommerhausen", "status": "official", "checked_on": "2026-07-18"}
       ]
     },
     {
@@ -734,22 +734,22 @@
       "cost_per_person_cents": 0,
       "additional_costs": "",
       "cost_valid_until": null,
-      "sunday_status": "seasonal",
-      "sunday_text": "Ganzjährig sonntags mit saisonalen Tageszeiten geöffnet.",
+      "sunday_status": "confirmed",
+      "sunday_text": "Ganzjährig täglich geöffnet: April–September 9–21:30 Uhr, Oktober–März 9–15:30 Uhr; Eintritt ganzjährig frei.",
       "environment": "outdoor",
       "duration_min": 120,
       "duration_max": 240,
       "booking_required": false,
       "step_free": true,
-      "accessibility_text": "Stufenfreier Zugang zum großen See; stufenfreie Toilette nur saisonal.",
-      "preparation_text": "Gewässerqualität, Wetter, Öffnungszeit, Toilette und aktuelle Verbote kurzfristig prüfen.",
+      "accessibility_text": "Laut Landkreis barrierefrei (seit 2012); zwei Toilettenanlagen und Behindertentoilette April–Oktober geöffnet.",
+      "preparation_text": "Gewässerqualität, Wetter und Kioskzeiten kurzfristig prüfen; keine Hunde, kein Zelten.",
       "plan_b": "Hubland-Bibliothek bei geklärtem Zugang.",
-      "pre_departure_checks": ["Gewässerqualität und Gewitter prüfen", "Toilettenöffnung prüfen", "Aktuelle Feuer- und Grillregeln prüfen"],
-      "source_checked_on": "2026-07-15",
-      "next_review_on": "2026-07-22",
+      "pre_departure_checks": ["Gewässerqualität und Gewitter prüfen", "Toilettenöffnung prüfen", "Regeln beachten: keine Hunde, kein Zelten"],
+      "source_checked_on": "2026-07-18",
+      "next_review_on": "2026-10-16",
       "booking_url": null,
       "sources": [
-        {"url": "https://www.landkreis-wuerzburg.de/Bildung-Freizeit-Kultur/Urlaub-dahemm/Badesee/?La=1", "publisher": "Landkreis Würzburg", "status": "official", "checked_on": "2026-07-15"},
+        {"url": "https://www.landkreis-wuerzburg.de/Bildung-Freizeit-Kultur/Urlaub-dahemm/Badesee/?La=1", "publisher": "Landkreis Würzburg", "status": "official", "checked_on": "2026-07-18"},
         {"url": "https://www.landkreis-wuerzburg.de/B%C3%BCrger-Politik-Verwaltung/Aufgaben-der-Verwaltung/Zweckverband-Erholungs-und-Wandergebiet-W%C3%BCrzburg", "publisher": "Landkreis Würzburg", "status": "official", "checked_on": "2026-07-15"}
       ]
     },
@@ -1072,10 +1072,10 @@
       "activity_type": "Freizeitpark und Bewegung",
       "locality": "Zirndorf bei Nürnberg",
       "distance_from_wuerzburg_km": 90.0,
-      "cost_status": "unknown",
-      "cost_per_person_cents": null,
-      "additional_costs": "Preise nur im Online-Ticketshop; Saison- und Alterstarife dort prüfen.",
-      "cost_valid_until": null,
+      "cost_status": "known",
+      "cost_per_person_cents": 2490,
+      "additional_costs": "Nachmittagsticket ab 15 Uhr 21,90 €; Gruppen ab 10 zahlenden Personen 2 € Rabatt pro Person (Hauptsaison); unter 3 Jahren frei (Null-Ticket erforderlich); Eintritt ausschließlich mit Online-Ticket.",
+      "cost_valid_until": "2026-10-16",
       "sunday_status": "confirmed",
       "sunday_text": "Hauptsaison bis 08.11.2026 täglich 9–19 Uhr (ab 15.09. bis 18 Uhr); danach 10–18 Uhr.",
       "environment": "mixed",
@@ -1087,10 +1087,13 @@
       "preparation_text": "Online-Tickets vorab kaufen (Pflicht); Wetter, Wechselkleidung und ganzen Tag einplanen.",
       "plan_b": "Bei Ausfall: Termin verschieben – für Spontanbesuche zu weit.",
       "pre_departure_checks": ["Online-Tickets für alle kaufen", "Saisonzeiten prüfen", "Anfahrt und Rückfahrt planen"],
-      "source_checked_on": "2026-07-17",
-      "next_review_on": "2026-10-15",
-      "booking_url": "https://www.playmobil-funpark.de/",
-      "sources": [{"url": "https://www.playmobil-funpark.de/", "publisher": "PLAYMOBIL-FunPark", "status": "official", "checked_on": "2026-07-17"}]
+      "source_checked_on": "2026-07-18",
+      "next_review_on": "2026-10-16",
+      "booking_url": "https://www.playmobil-funpark.de/shop",
+      "sources": [
+        {"url": "https://www.playmobil-funpark.de/en/oeffnungszeiten-preise", "publisher": "PLAYMOBIL-FunPark", "status": "official", "checked_on": "2026-07-18"},
+        {"url": "https://www.playmobil-funpark.de/", "publisher": "PLAYMOBIL-FunPark", "status": "official", "checked_on": "2026-07-17"}
+      ]
     }
   ]
 }
