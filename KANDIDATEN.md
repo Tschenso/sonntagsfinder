@@ -60,11 +60,11 @@ Empfohlene Losgröße: 4–8 Kandidaten pro Redaktionslauf.
 |---|---|---|---|
 | Rothenburg o. d. T.: Altstadt & Turmweg (Bahn) | rothenburg-tourismus.de | museum-kultur, aussicht, ohne-auto | offen |
 | Bamberg: Altstadt (UNESCO, Bahn direkt) | bamberg.info | museum-kultur, ohne-auto | offen |
-| Nürnberg: DB Museum (Bahn direkt) | dbmuseum.de | wissenschaft, regenfest, ohne-auto | offen |
-| Nürnberg: Tiergarten | tiergarten.nuernberg.de | tiere | offen |
-| Nürnberg: Kindermuseum (nur So/Sa!) | kindermuseum-nuernberg.de | wissenschaft, regenfest | offen |
+| Nürnberg: DB Museum (Bahn direkt) | dbmuseum.de | wissenschaft, regenfest, ohne-auto | ✓ aufgenommen 2026-07-19 |
+| Nürnberg: Tiergarten | tiergarten.nuernberg.de | tiere | ✓ aufgenommen 2026-07-19 |
+| Nürnberg: Kindermuseum (nur So/Sa!) | kindermuseum-nuernberg.de | wissenschaft, regenfest | ✓ aufgenommen 2026-07-19 (Sommerpause Jul–Sep!) |
 | Nürnberg: Erfahrungsfeld zur Entfaltung der Sinne (saisonal) | nuernberg.de | wissenschaft | offen |
-| Nürnberg: Germanisches Nationalmuseum | gnm.de | museum-kultur, regenfest | offen |
+| Nürnberg: Germanisches Nationalmuseum | gnm.de | museum-kultur, regenfest | ✓ aufgenommen 2026-07-19 |
 | Miltenberg: Altstadt (Westfrankenbahn) | miltenberg.info | museum-kultur, ohne-auto | offen |
 | Aschaffenburg: Schloss Johannisburg & Pompejanum | schloesser.bayern.de | museum-kultur | offen |
 | Aschaffenburg: Park Schönbusch | schloesser.bayern.de | garten-park | offen |
