@@ -33,8 +33,8 @@ Eine inhaltliche Änderung ist immer eine Änderung an `catalog.json` oder `even
   Tagesausflug ≤ 50 km / **Fernziel > 50 km** / Vorlagen), Kategorien-Chips (Mehrfachauswahl),
   verfügbare Zeit, Umgebung, „nur sonntags bestätigt / stufenfrei / kostenlos“.
 - **Kategorien**: Jeder Eintrag trägt ein redaktionell gepflegtes `tags`-Feld. Erlaubte Werte:
-  `regenfest`, `tiere`, `wasser`, `wald-natur`, `garten-park`, `museum-kultur`,
-  `wissenschaft`, `bewegung`, `aussicht`, `ohne-auto`. Bedeutung von `ohne-auto`:
+  `regenfest`, `tiere`, `hallenbad`, `freibad-see`, `wald-natur`, `garten-park`,
+  `museum-kultur`, `wissenschaft`, `bewegung`, `aussicht`, `ohne-auto`. Bedeutung von `ohne-auto`:
   zu Fuß oder mit Bahn/Bus ab Würzburg gut erreichbar – nur vergeben, wenn das
   plausibel belegt ist (Stadtgebiet oder Bahnhalt am Ort). Neue Kategorien zuerst
   hier dokumentieren, dann in `index.html` (Konstante `TAGS`) ergänzen.

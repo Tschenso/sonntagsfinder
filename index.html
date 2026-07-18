@@ -259,7 +259,8 @@
           <button type="button" class="tchip" data-t="regenfest" aria-pressed="false">🌧 Regenfest</button>
           <button type="button" class="tchip" data-t="ohne-auto" aria-pressed="false">🚌 Ohne Auto machbar</button>
           <button type="button" class="tchip" data-t="tiere" aria-pressed="false">🦌 Tiere</button>
-          <button type="button" class="tchip" data-t="wasser" aria-pressed="false">💧 Wasser</button>
+          <button type="button" class="tchip" data-t="hallenbad" aria-pressed="false">🏊 Hallenbad</button>
+          <button type="button" class="tchip" data-t="freibad-see" aria-pressed="false">🏖 Freibad &amp; See</button>
           <button type="button" class="tchip" data-t="wald-natur" aria-pressed="false">🌲 Wald &amp; Natur</button>
           <button type="button" class="tchip" data-t="garten-park" aria-pressed="false">🌷 Garten &amp; Park</button>
           <button type="button" class="tchip" data-t="museum-kultur" aria-pressed="false">🏛 Museum &amp; Kultur</button>
@@ -402,7 +403,8 @@ function norm(s){ return (s||"").toLowerCase().replace(/ß/g,"ss").normalize("NF
 /* Kuratierte Kategorien: kommen als "tags"-Feld direkt aus catalog.json.
    Mehrfachauswahl mit ODER-Logik; leer = alle Kategorien. */
 const TAGS = {
-  "regenfest": "🌧 Regenfest", "tiere": "🦌 Tiere", "wasser": "💧 Wasser",
+  "regenfest": "🌧 Regenfest", "tiere": "🦌 Tiere",
+  "hallenbad": "🏊 Hallenbad", "freibad-see": "🏖 Freibad & See",
   "wald-natur": "🌲 Wald & Natur", "garten-park": "🌷 Garten & Park",
   "museum-kultur": "🏛 Museum & Kultur", "wissenschaft": "🔬 Wissenschaft",
   "bewegung": "🏃 Bewegung", "aussicht": "🌄 Aussicht", "ohne-auto": "🚌 Ohne Auto machbar"
