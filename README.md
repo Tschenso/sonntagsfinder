@@ -21,6 +21,7 @@ Es wird nichts gespeichert und nichts übertragen.
 | `sonntagsfinder-offline.html` | **Offline-Ausgabe**: eine doppelklickbare Datei mit eingebetteten Daten |
 | `make-offline.ps1` | erzeugt die Offline-Ausgabe neu aus `index.html` + JSON-Dateien |
 | `check-links.ps1` | Redaktionswerkzeug: prüft alle Quell-/Booking-URLs und listet fällige Reviews |
+| `KANDIDATEN.md` | redaktioneller Arbeitsvorrat auf dem Weg zu ~100 Einträgen (unverifiziert) |
 | `README.md` | dieses Dokument |
 
 Eine inhaltliche Änderung ist immer eine Änderung an `catalog.json` oder `events.json`.
