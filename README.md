@@ -20,6 +20,7 @@ Es wird nichts gespeichert und nichts übertragen.
 | `events.json` | kuratierte, zeitlich begrenzte Hinweise (laufen automatisch ab) |
 | `sonntagsfinder-offline.html` | **Offline-Ausgabe**: eine doppelklickbare Datei mit eingebetteten Daten |
 | `make-offline.ps1` | erzeugt die Offline-Ausgabe neu aus `index.html` + JSON-Dateien |
+| `check-links.ps1` | Redaktionswerkzeug: prüft alle Quell-/Booking-URLs und listet fällige Reviews |
 | `README.md` | dieses Dokument |
 
 Eine inhaltliche Änderung ist immer eine Änderung an `catalog.json` oder `events.json`.
@@ -143,6 +144,24 @@ Das Vier-Augen-Prinzip läuft über Git, nicht über Anwendungscode:
 6. **Grundsätze:** Keine Personendaten, keine Wohn- oder Gruppenadressen, keine
    Eignungsaussagen über einzelne Personen. Unsicherheit wird nie als „Passt“
    dargestellt – im Zweifel `derived`/`unknown` lassen und die Ampel entscheiden lassen.
+
+## Pflege-Rhythmus (monatlich, ca. 30–60 Minuten)
+
+1. **Links & Fälligkeiten prüfen:**
+   ```powershell
+   powershell -ExecutionPolicy Bypass -File .\check-links.ps1
+   ```
+   Der Report zeigt nicht erreichbare URLs (bitte im Browser gegenprüfen – manche
+   Seiten blocken nur automatisierte Abrufe) und alle Einträge, deren
+   `next_review_on` erreicht ist oder in den nächsten 30 Tagen fällig wird.
+2. **Fällige Reviews abarbeiten:** Quellseite aufrufen, Fakten abgleichen,
+   `source_checked_on` aktualisieren und ein neues `next_review_on` setzen
+   (Faustregel: Öffnung/Preis 90 Tage, saisonal 30 Tage, stabil 180 Tage).
+   Tote Links durch die aktuelle offizielle Seite ersetzen.
+3. **Offline-Ausgabe neu bauen:** `make-offline.ps1` ausführen.
+4. **Committen & pushen** – ein Commit pro Pflegelauf mit Datum im Text.
+   Danach einmal die Live-Seite hart neu laden (Strg+F5) und die
+   Katalogversion im Fußbereich kontrollieren.
 
 ## Herkunft & Attribution
 
