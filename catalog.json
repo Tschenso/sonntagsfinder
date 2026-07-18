@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "catalog_version": "2026-07-19.3",
+  "catalog_version": "2026-07-19.4",
   "note": "Öffentlicher Katalog des Sonntagsfinders Würzburg. Basis: redaktioneller Basiskatalog v1 (2026-07-15.1, 30 Einträge) plus 9 neue Einträge vom 2026-07-17 (6 regionale, 3 Fernziele mit booking_url). Änderungen bitte per Pull-Request, siehe README.",
   "activities": [
     {
@@ -626,7 +626,7 @@
       "booking_url": null,
       "sources": [
         {"url": "https://museumshalomeuropa.de/", "publisher": "Museum Shalom Europa", "status": "official", "checked_on": "2026-07-15"},
-        {"url": "https://museumshalomeuropa.de/wp-content/uploads/Kalender-2026-Deutsch-2-1.pdf", "publisher": "Museum Shalom Europa", "status": "official", "checked_on": "2026-07-15"}
+        {"url": "https://museumshalomeuropa.de/wp-content/uploads/2026/05/Kalender-2026-Deutsch-2-1.pdf", "publisher": "Museum Shalom Europa", "status": "official", "checked_on": "2026-07-19"}
       ]
     },
     {
@@ -1061,7 +1061,7 @@
       "pre_departure_checks": ["Gruppenreservierung bestätigen", "Schließtage prüfen", "Zugverbindung und Rückfahrt planen"],
       "source_checked_on": "2026-07-17",
       "next_review_on": "2026-10-15",
-      "booking_url": "https://shop.experimenta.science",
+      "booking_url": "https://buchung.experimenta.science/ticket-web-shop/relaunch/",
       "sources": [{"url": "https://www.experimenta.science/besuchen/oeffnungszeiten-eintrittspreise/", "publisher": "experimenta gGmbH", "status": "official", "checked_on": "2026-07-17"}]
     },
     {
