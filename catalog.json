@@ -1,10 +1,11 @@
 {
   "schema_version": 2,
-  "catalog_version": "2026-07-17.3",
+  "catalog_version": "2026-07-18.1",
   "note": "Öffentlicher Katalog des Sonntagsfinders Würzburg. Basis: redaktioneller Basiskatalog v1 (2026-07-15.1, 30 Einträge) plus 9 neue Einträge vom 2026-07-17 (6 regionale, 3 Fernziele mit booking_url). Änderungen bitte per Pull-Request, siehe README.",
   "activities": [
     {
       "seed_key": "hofgarten-residenz",
+      "tags": ["garten-park","ohne-auto"],
       "title": "Hofgarten der Residenz",
       "summary": "Freie Eigenrunde durch historische Gartenräume mit Sitzmöglichkeiten.",
       "activity_type": "Garten und Spaziergang",
@@ -32,6 +33,7 @@
     },
     {
       "seed_key": "hofgarten-veitshoechheim",
+      "tags": ["garten-park","ohne-auto"],
       "title": "Hofgarten Veitshöchheim",
       "summary": "Rokokogarten mit Seen, Figuren und gut befahrbaren Wegen.",
       "activity_type": "Garten und Kunst",
@@ -59,6 +61,7 @@
     },
     {
       "seed_key": "mik",
+      "tags": ["museum-kultur","regenfest","ohne-auto"],
       "title": "Museum im Kulturspeicher",
       "summary": "Kunstmuseum mit inklusiven Angeboten, Bodenleitsystem und stufenfrei erreichbaren Räumen.",
       "activity_type": "Kunstmuseum",
@@ -86,6 +89,7 @@
     },
     {
       "seed_key": "museum-franken",
+      "tags": ["museum-kultur","regenfest","aussicht","ohne-auto"],
       "title": "Museum für Franken",
       "summary": "Fränkische Kunst- und Kulturgeschichte auf der Festung Marienberg.",
       "activity_type": "Geschichtsmuseum",
@@ -113,6 +117,7 @@
     },
     {
       "seed_key": "martin-von-wagner",
+      "tags": ["museum-kultur","regenfest","ohne-auto"],
       "title": "Martin von Wagner Museum",
       "summary": "Kostenloser Sammlungsbesuch; sonntags wechseln Antikensammlung und Gemäldegalerie.",
       "activity_type": "Kunst und Antike",
@@ -140,6 +145,7 @@
     },
     {
       "seed_key": "mineralogisches-museum",
+      "tags": ["wissenschaft","regenfest","ohne-auto"],
       "title": "Mineralogisches Museum",
       "summary": "Mineralien, Gesteine und Fossilien in einer kompakten kostenlosen Sammlung.",
       "activity_type": "Naturwissenschaftsmuseum",
@@ -167,6 +173,7 @@
     },
     {
       "seed_key": "gramschatzer-pfade",
+      "tags": ["wald-natur"],
       "title": "Sinneswandeln und Zahlenwald",
       "summary": "Gebührenfreie Außenpfade für Sinne, Natur und Mathematik; Gebäude nicht einplanen.",
       "activity_type": "Wald und Lehrpfade",
@@ -194,6 +201,7 @@
     },
     {
       "seed_key": "planetenweg",
+      "tags": ["wissenschaft","ohne-auto"],
       "title": "Planetenweg Würzburg",
       "summary": "Etwa zwei Kilometer langer Themenweg mit ertastbaren Planetenmodellen.",
       "activity_type": "Astronomie und Spaziergang",
@@ -221,6 +229,7 @@
     },
     {
       "seed_key": "ringpark-lehrpfad",
+      "tags": ["garten-park","wald-natur","ohne-auto"],
       "title": "Naturlehrpfad Ringpark",
       "summary": "Rund dreieinhalb Kilometer durch Würzburgs Grün mit acht Stationen zu Natur-, Baum- und Klimathemen.",
       "activity_type": "Stadtnatur und Spaziergang",
@@ -248,6 +257,7 @@
     },
     {
       "seed_key": "stein-wein-pfad",
+      "tags": ["aussicht","ohne-auto"],
       "title": "Stein-Wein-Pfad",
       "summary": "Vier Kilometer Weinbergsweg mit Informationstafeln; kurze Teilrunden möglich.",
       "activity_type": "Aussicht und Wanderung",
@@ -275,6 +285,7 @@
     },
     {
       "seed_key": "gedankenweg",
+      "tags": ["wald-natur"],
       "title": "GeDANKEnWeg",
       "summary": "Rund 2,7 Kilometer langer Rundweg mit Kunst- und Besinnungsstationen im Wald am Gaigel.",
       "activity_type": "Kunst und Waldrunde",
@@ -302,6 +313,7 @@
     },
     {
       "seed_key": "guttenberger-forst",
+      "tags": ["wald-natur"],
       "title": "Walderlebnispfad Guttenberger Forst",
       "summary": "Rund zwei Kilometer mit zwölf Mitmachstationen (ab vier Jahren) und Aussichtsturm; Runde abkürzbar.",
       "activity_type": "Wald und Mitmachstationen",
@@ -329,6 +341,7 @@
     },
     {
       "seed_key": "mainwiesen-skatepark",
+      "tags": ["bewegung","ohne-auto"],
       "title": "Mainwiesen und Skatepark",
       "summary": "Öffentliche Mainwiesen mit Fuß- und Radweg, Spielplätzen und Skatepark.",
       "activity_type": "Bewegung und Mainrunde",
@@ -356,6 +369,7 @@
     },
     {
       "seed_key": "nautiland",
+      "tags": ["wasser","bewegung","regenfest","ohne-auto"],
       "title": "Nautiland – kurze Wasserzeit",
       "summary": "Ganzjähriges Bad als planbarer Regenausflug; Tarife unterscheiden Dauer und Alter.",
       "activity_type": "Schwimmen und Bewegung",
@@ -383,6 +397,7 @@
     },
     {
       "seed_key": "foto-rallye",
+      "tags": [],
       "title": "Foto-Rallye ohne Personenaufnahmen",
       "summary": "Formen, Farben, Bauwerke und Naturdetails suchen; keine unbeteiligten Personen fotografieren.",
       "activity_type": "Ortsunabhängige Aktivitätsvorlage",
@@ -410,6 +425,7 @@
     },
     {
       "seed_key": "natur-bingo",
+      "tags": ["wald-natur"],
       "title": "Natur-Bingo: sehen statt sammeln",
       "summary": "Blätterformen, Geräusche, Farben und Strukturen beobachten, ohne etwas zu entnehmen.",
       "activity_type": "Ortsunabhängige Aktivitätsvorlage",
@@ -437,6 +453,7 @@
     },
     {
       "seed_key": "spieleturnier",
+      "tags": ["regenfest"],
       "title": "Kooperatives Spieleturnier",
       "summary": "Kurze Teamspiele ohne Personenrangliste; gemeinsame gelöste Aufgaben stehen im Mittelpunkt.",
       "activity_type": "Ortsunabhängige Plan-B-Vorlage",
@@ -464,6 +481,7 @@
     },
     {
       "seed_key": "stadtteilbuecherei-hubland-open-library",
+      "tags": ["museum-kultur","regenfest","ohne-auto"],
       "title": "Stadtteilbücherei Hubland – Open Library",
       "summary": "Lesen, Brettspiele und selbst organisierte Themen- oder Rechercheaufgaben.",
       "activity_type": "Bibliothek und ruhige Indoor-Aktivität",
@@ -494,6 +512,7 @@
     },
     {
       "seed_key": "residenz-wuerzburg-innenraeume",
+      "tags": ["museum-kultur","regenfest","ohne-auto"],
       "title": "Residenz Würzburg – Innenräume",
       "summary": "Historische Räume selbstständig oder mit optionaler Führung erkunden.",
       "activity_type": "Schlossmuseum",
@@ -525,6 +544,7 @@
     },
     {
       "seed_key": "trachtenmuseum-ochsenfurt",
+      "tags": ["museum-kultur","regenfest","ohne-auto"],
       "title": "Trachtenmuseum Ochsenfurt",
       "summary": "Regionale Trachten und Alltagskultur in einem kleinen saisonalen Museum.",
       "activity_type": "Museum",
@@ -552,6 +572,7 @@
     },
     {
       "seed_key": "deutsches-fastnachtmuseum",
+      "tags": ["museum-kultur","regenfest","ohne-auto"],
       "title": "Deutsches Fastnachtmuseum",
       "summary": "Fastnachtsgeschichte mit Masken, Kostümen und Medien in einem stufenfreien Museum.",
       "activity_type": "Museum",
@@ -579,6 +600,7 @@
     },
     {
       "seed_key": "museum-shalom-europa",
+      "tags": ["museum-kultur","regenfest","ohne-auto"],
       "title": "Museum Shalom Europa",
       "summary": "Jüdische Geschichte und Gegenwart mit respektvoller thematischer Vorbereitung.",
       "activity_type": "Museum",
@@ -609,6 +631,7 @@
     },
     {
       "seed_key": "siebold-museum",
+      "tags": ["museum-kultur","regenfest","ohne-auto"],
       "title": "Siebold-Museum",
       "summary": "Kompaktes Museum zu Philipp Franz von Siebold und den Beziehungen zu Japan.",
       "activity_type": "Museum",
@@ -639,6 +662,7 @@
     },
     {
       "seed_key": "juedisches-kulturmuseum-veitshoechheim",
+      "tags": ["museum-kultur","regenfest","ohne-auto"],
       "title": "Jüdisches Kulturmuseum Veitshöchheim",
       "summary": "Museum und historische Räume zur jüdischen Ortsgeschichte.",
       "activity_type": "Museum und historisches Gebäude",
@@ -669,6 +693,7 @@
     },
     {
       "seed_key": "tierpark-sommerhausen",
+      "tags": ["tiere"],
       "title": "Tierpark Sommerhausen",
       "summary": "Tierpark und Umweltstation für einen längeren Außenausflug.",
       "activity_type": "Tierpark",
@@ -699,6 +724,7 @@
     },
     {
       "seed_key": "erlabrunner-badesee",
+      "tags": ["wasser"],
       "title": "Erlabrunner Badesee",
       "summary": "Kostenlose Freizeitanlage am See; saisonale Infrastruktur und Baderegeln beachten.",
       "activity_type": "Badesee und Freizeitanlage",
@@ -729,6 +755,7 @@
     },
     {
       "seed_key": "freizeitanlage-neumuehle",
+      "tags": ["bewegung","garten-park","ohne-auto"],
       "title": "Grün- und Freizeitanlage Neumühle",
       "summary": "Öffentliche Parkour-, Spiel- und Fitnessanlage mit Rundweg.",
       "activity_type": "Bewegungsanlage",
@@ -756,6 +783,7 @@
     },
     {
       "seed_key": "waldlehrpfad-hoechberg",
+      "tags": ["wald-natur","ohne-auto"],
       "title": "Waldlehrpfad Höchberg",
       "summary": "Etwa vier Kilometer langer Lehrpfad durch den Wald.",
       "activity_type": "Lehrpfad und Wanderung",
@@ -783,6 +811,7 @@
     },
     {
       "seed_key": "bio-rundweg-gadheim",
+      "tags": ["wald-natur"],
       "title": "Bio-Rundweg Gadheim",
       "summary": "Kurzer Lehrpfad zu Landwirtschaft, regionalen Produkten und Wildlebensräumen.",
       "activity_type": "Natur- und Landwirtschaftslehrpfad",
@@ -810,6 +839,7 @@
     },
     {
       "seed_key": "willis-schnecken-weg",
+      "tags": ["wald-natur"],
       "title": "Willis Schnecken-Weg",
       "summary": "Interaktiver Naturweg mit Aufgaben, Rastplätzen und optionalem Barfußpfad.",
       "activity_type": "Interaktiver Naturweg",
@@ -837,6 +867,7 @@
     },
     {
       "seed_key": "botanischer-garten-wuerzburg",
+      "tags": ["garten-park","wissenschaft","ohne-auto"],
       "title": "Botanischer Garten der Universität",
       "summary": "Rund 9.000 Pflanzenarten in Freiland und Gewächshäusern; ruhiger, kostenloser Ganzjahresort.",
       "activity_type": "Garten und Naturkunde",
@@ -864,6 +895,7 @@
     },
     {
       "seed_key": "kaeppele-nikolausberg",
+      "tags": ["aussicht","ohne-auto"],
       "title": "Käppele und Nikolausberg",
       "summary": "Wallfahrtskirche mit Stationsweg und einem der schönsten Ausblicke auf Würzburg.",
       "activity_type": "Aussicht und Spaziergang",
@@ -891,6 +923,7 @@
     },
     {
       "seed_key": "altstadt-mainbruecke-runde",
+      "tags": ["aussicht","ohne-auto"],
       "title": "Altstadtrunde über die Alte Mainbrücke",
       "summary": "Freie Stadtrunde: Alte Mainbrücke, Dom, Marktplatz und Mainkai in eigenem Tempo.",
       "activity_type": "Stadtrundgang",
@@ -918,6 +951,7 @@
     },
     {
       "seed_key": "mainschleife-volkach",
+      "tags": ["aussicht"],
       "title": "Mainschleife Volkach – Panoramaweg",
       "summary": "Panoramaweg (3 km) vom Mainschleifenbahn-Halt Astheim zur Vogelsburg – einer der schönsten Blicke über die Mainschleife.",
       "activity_type": "Aussicht und Wanderung",
@@ -945,6 +979,7 @@
     },
     {
       "seed_key": "schlosspark-werneck",
+      "tags": ["garten-park"],
       "title": "Schlosspark Werneck",
       "summary": "Weitläufiger Park an Balthasar Neumanns Schloss mit Weiher und alten Baumbeständen.",
       "activity_type": "Park und Spaziergang",
@@ -975,6 +1010,7 @@
     },
     {
       "seed_key": "wildpark-bad-mergentheim",
+      "tags": ["tiere","wald-natur"],
       "title": "Wildpark Bad Mergentheim",
       "summary": "Großer Wildpark mit heimischen Tierarten und Fütterungsrunden – ein voller Außentag.",
       "activity_type": "Wildpark",
@@ -1002,6 +1038,7 @@
     },
     {
       "seed_key": "experimenta-heilbronn",
+      "tags": ["wissenschaft","regenfest","ohne-auto"],
       "title": "experimenta Heilbronn",
       "summary": "Deutschlands großes Science Center: Mitmach-Ausstellung, Science Dome und Sternwarte.",
       "activity_type": "Wissenschaft und Mitmach-Ausstellung",
@@ -1029,6 +1066,7 @@
     },
     {
       "seed_key": "playmobil-funpark",
+      "tags": ["bewegung"],
       "title": "PLAYMOBIL-FunPark",
       "summary": "Großer Aktiv-Spielpark mit Themenwelten; Eintritt nur mit gültigem Online-Ticket.",
       "activity_type": "Freizeitpark und Bewegung",

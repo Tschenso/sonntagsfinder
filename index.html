@@ -254,15 +254,20 @@
         </select>
       </div>
       <div class="field">
-        <span style="font-size:.85rem;font-weight:650">Themen</span>
-        <div class="theme-chips" role="group" aria-label="Themenfilter (Mehrfachauswahl)">
-          <button type="button" class="tchip" data-t="museum" aria-pressed="false">Museum &amp; Kultur</button>
-          <button type="button" class="tchip" data-t="natur" aria-pressed="false">Natur &amp; Tiere</button>
-          <button type="button" class="tchip" data-t="wandern" aria-pressed="false">Wege &amp; Aussicht</button>
-          <button type="button" class="tchip" data-t="bewegung" aria-pressed="false">Bewegung &amp; Wasser</button>
-          <button type="button" class="tchip" data-t="wissen" aria-pressed="false">Wissenschaft</button>
+        <span style="font-size:.85rem;font-weight:650">Kategorien</span>
+        <div class="theme-chips" role="group" aria-label="Kategorienfilter (Mehrfachauswahl)">
+          <button type="button" class="tchip" data-t="regenfest" aria-pressed="false">🌧 Regenfest</button>
+          <button type="button" class="tchip" data-t="ohne-auto" aria-pressed="false">🚌 Ohne Auto machbar</button>
+          <button type="button" class="tchip" data-t="tiere" aria-pressed="false">🦌 Tiere</button>
+          <button type="button" class="tchip" data-t="wasser" aria-pressed="false">💧 Wasser</button>
+          <button type="button" class="tchip" data-t="wald-natur" aria-pressed="false">🌲 Wald &amp; Natur</button>
+          <button type="button" class="tchip" data-t="garten-park" aria-pressed="false">🌷 Garten &amp; Park</button>
+          <button type="button" class="tchip" data-t="museum-kultur" aria-pressed="false">🏛 Museum &amp; Kultur</button>
+          <button type="button" class="tchip" data-t="wissenschaft" aria-pressed="false">🔬 Wissenschaft</button>
+          <button type="button" class="tchip" data-t="bewegung" aria-pressed="false">🏃 Bewegung</button>
+          <button type="button" class="tchip" data-t="aussicht" aria-pressed="false">🌄 Aussicht</button>
         </div>
-        <span class="hint">Mehrfachauswahl möglich; leer = alle Themen.</span>
+        <span class="hint">Mehrfachauswahl möglich; leer = alle Kategorien. „Ohne Auto" = zu Fuß oder mit Bahn/Bus ab Würzburg gut erreichbar.</span>
       </div>
       <div class="field">
         <label for="dur">Verfügbare Zeit</label>
@@ -394,13 +399,13 @@ const TIER = {stadt:"Stadt", umkreis:"Umkreis", tagesausflug:"Tagesausflug", fer
 /* Suche: klein, ohne Diakritika, ß→ss – "kappele" findet "Käppele" */
 function norm(s){ return (s||"").toLowerCase().replace(/ß/g,"ss").normalize("NFD").replace(/[̀-ͯ]/g,""); }
 
-/* Themen als Prädikate über den Aktivitätstyp – Mehrfachauswahl, ODER-Logik */
-const THEMES = {
-  museum:   it => /museum|kunst|geschichte|schloss|antike|bibliothek|kultur|stadtrundgang/i.test(it.ty),
-  natur:    it => /wald|natur|garten|park|lehrpfad|stadtnatur|landwirtschaft|tierpark|wildpark|naturweg/i.test(it.ty),
-  wandern:  it => /wanderung|spaziergang|pfad|weg|runde|aussicht/i.test(it.ty),
-  bewegung: it => /bewegung|schwimmen|skate|freizeitpark|badesee|parkour/i.test(it.ty),
-  wissen:   it => /wissenschaft|astronomie|mineralog|mitmach|experiment/i.test(it.ty)
+/* Kuratierte Kategorien: kommen als "tags"-Feld direkt aus catalog.json.
+   Mehrfachauswahl mit ODER-Logik; leer = alle Kategorien. */
+const TAGS = {
+  "regenfest": "🌧 Regenfest", "tiere": "🦌 Tiere", "wasser": "💧 Wasser",
+  "wald-natur": "🌲 Wald & Natur", "garten-park": "🌷 Garten & Park",
+  "museum-kultur": "🏛 Museum & Kultur", "wissenschaft": "🔬 Wissenschaft",
+  "bewegung": "🏃 Bewegung", "aussicht": "🌄 Aussicht", "ohne-auto": "🚌 Ohne Auto machbar"
 };
 const activeThemes = new Set();
 function worst(a,b){ const rank={ok:0,check:1,no:2}; return rank[a]>=rank[b]?a:b; }
@@ -421,7 +426,7 @@ function mapEntry(a){
     env:a.environment, dmin:a.duration_min, dmax:a.duration_max,
     book:a.booking_required, step:a.step_free, acc:a.accessibility_text || "",
     prep:a.preparation_text, planB:a.plan_b, chk:a.pre_departure_checks || [],
-    cOn:a.source_checked_on, nR:a.next_review_on, bookingUrl:a.booking_url || null,
+    cOn:a.source_checked_on, nR:a.next_review_on, bookingUrl:a.booking_url || null, tags:a.tags || [],
     url:s0.url || "", pub:s0.publisher || "", src:s0.status || "derived"
   };
 }
@@ -494,6 +499,7 @@ function card(it, ev){
       <span class="tag">Sonntag: ${SUN[it.sun]}</span>
       <span class="tag">${it.dmin}–${it.dmax} Min.</span>
       ${stepTag}${bookTag}${overdueTag}
+      ${it.tags.map(t => `<span class="tag">${TAGS[t] || t}</span>`).join("")}
     </div>
     <ul class="why">${reasons}</ul>
     ${booking}
@@ -550,7 +556,7 @@ function apply(){
     }
     if (f.env && it.env !== f.env) return false;
     if (f.dur && it.dmin > +f.dur) return false;
-    if (activeThemes.size && ![...activeThemes].some(t => THEMES[t] && THEMES[t](it))) return false;
+    if (activeThemes.size && ![...activeThemes].some(t => it.tags.includes(t))) return false;
     if (f.tier){
       if (f.tier === "vorlage"){ if (it.dist != null) return false; }
       else { if (it.dist == null || tierKey(it.dist) !== f.tier) return false; }
@@ -616,7 +622,7 @@ function readState(str){
     if (p.has("dur")) $("dur").value = p.get("dur");
     if (p.has("t")){
       activeThemes.clear();
-      p.get("t").split(",").filter(Boolean).forEach(x => { if (THEMES[x]) activeThemes.add(x); });
+      p.get("t").split(",").filter(Boolean).forEach(x => { if (TAGS[x]) activeThemes.add(x); });
       document.querySelectorAll(".tchip").forEach(b => b.setAttribute("aria-pressed", activeThemes.has(b.dataset.t) ? "true" : "false"));
     }
     if (p.has("sun")) $("sun").checked = p.get("sun") === "1";
