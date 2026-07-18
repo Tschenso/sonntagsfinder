@@ -18,6 +18,8 @@ Es wird nichts gespeichert und nichts übertragen.
 | `index.html` | komplette Website (Layout, Filter, Ampellogik) – ohne Build-Step |
 | `catalog.json` | **die Datenquelle**: alle Einträge, Quellen und Prüfdaten |
 | `events.json` | kuratierte, zeitlich begrenzte Hinweise (laufen automatisch ab) |
+| `sonntagsfinder-offline.html` | **Offline-Ausgabe**: eine doppelklickbare Datei mit eingebetteten Daten |
+| `make-offline.ps1` | erzeugt die Offline-Ausgabe neu aus `index.html` + JSON-Dateien |
 | `README.md` | dieses Dokument |
 
 Eine inhaltliche Änderung ist immer eine Änderung an `catalog.json` oder `events.json`.
@@ -58,9 +60,27 @@ blendet die Website ihn automatisch aus; es kann also nie ein abgelaufenes Event
 Die „Aktuelles“-Box verlinkt zusätzlich dauerhaft auf die offiziellen
 Veranstaltungskalender (Stadt, Landkreis, Frankentourismus) – die brauchen keine Pflege.
 
-## Lokal testen
+## Offline-Version (ohne Server, ohne Internet)
 
-`fetch()` funktioniert nicht über `file://`. Zum lokalen Testen einen Mini-Server starten:
+`sonntagsfinder-offline.html` ist die komplette Website als **eine Datei mit
+eingebetteten Daten** – einfach doppelklicken, sie öffnet sich im Browser und
+funktioniert vollständig offline (Filter, Ampel, Suche, gespeicherte Einstellungen).
+
+- **Weitergeben:** Datei per USB-Stick, internem Laufwerk oder Mailanhang verteilen –
+  keine Installation, keine Rechte, kein IT-Aufwand.
+- **Grenzen:** Die Quell- und Ticket-Links im Detailbereich brauchen Internet;
+  die Daten sind auf dem Stand des Erzeugungsdatums eingefroren (steht im Fußbereich).
+- **Aktualisieren:** Nach jeder Änderung an `catalog.json`/`events.json` neu erzeugen:
+
+```powershell
+cd Sonntagsfinder-Public
+powershell -ExecutionPolicy Bypass -File .\make-offline.ps1
+```
+
+## Lokal testen (Server-Variante)
+
+`index.html` lädt die Daten per `fetch()` – das funktioniert nicht über `file://`.
+Zum lokalen Testen der Server-Variante einen Mini-Server starten:
 
 ```powershell
 cd Sonntagsfinder-Public

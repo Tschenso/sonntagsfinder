@@ -626,16 +626,20 @@ function readState(str){
   } catch(e){}
 }
 
-/* ---------- Init: Katalog laden, dann verdrahten ---------- */
-fetch("catalog.json")
-  .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+/* ---------- Init: Katalog laden, dann verdrahten ----------
+   Offline-Ausgabe (sonntagsfinder-offline.html) bettet die Daten als
+   window.EMBEDDED_CATALOG/EMBEDDED_EVENTS ein und braucht keinen Server. */
+(window.EMBEDDED_CATALOG
+  ? Promise.resolve(window.EMBEDDED_CATALOG)
+  : fetch("catalog.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }))
   .then(cat => {
     DATA = (cat.activities || []).map(mapEntry);
     $("cntA").textContent = DATA.length;
     $("cntS").textContent = (cat.activities || []).reduce((n,a)=>n+((a.sources||[]).length),0);
     $("cntV").textContent = cat.catalog_version || "–";
     $("versionLine").textContent = "Katalogversion " + (cat.catalog_version || "?") +
-      " · offene Ressource · Filter lassen sich als Link teilen (Adresszeile kopieren) · Einstellungen bleiben lokal im Browser.";
+      " · offene Ressource · Filter lassen sich als Link teilen (Adresszeile kopieren) · Einstellungen bleiben lokal im Browser." +
+      (window.EMBEDDED_BUILD ? " · Offline-Ausgabe vom " + window.EMBEDDED_BUILD + " (Daten eingebettet)." : "");
     $("contactLink").href = reportHref("Allgemein");
     $("layout").hidden = false;
 
@@ -676,8 +680,9 @@ fetch("catalog.json")
 
 /* ---------- Aktuelles: kuratierte, zeitlich begrenzte Hinweise aus events.json ----------
    Abgelaufene Einträge (valid_until < heute) werden automatisch ausgeblendet. */
-fetch("events.json")
-  .then(r => r.ok ? r.json() : null)
+(window.EMBEDDED_EVENTS
+  ? Promise.resolve(window.EMBEDDED_EVENTS)
+  : fetch("events.json").then(r => r.ok ? r.json() : null))
   .then(ev => {
     if (!ev || !Array.isArray(ev.events)) return;
     const live = ev.events
