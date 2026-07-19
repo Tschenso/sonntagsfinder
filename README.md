@@ -16,7 +16,7 @@ Es wird nichts gespeichert und nichts übertragen.
 | Datei | Zweck |
 |---|---|
 | `index.html` | komplette Website (Layout, Filter, Ampellogik) – ohne Build-Step |
-| `vorlagen.html` | Unterseite: ortsunabhängige Aktivitätsvorlagen (Sonntage ohne Ausflug) |
+| `vorlagen.html` | Unterseite: ortsunabhängige Aktivitätsvorlagen, gruppiert nach Schlecht-/Schönwetter |
 | `catalog.json` | **die Datenquelle**: alle Einträge, Quellen und Prüfdaten |
 | `events.json` | kuratierte, zeitlich begrenzte Hinweise (laufen automatisch ab) |
 | `sonntagsfinder-offline.html` | **Offline-Ausgabe**: doppelklickbare Bibliothek mit eingebetteten Daten |
@@ -135,7 +135,11 @@ Das Vier-Augen-Prinzip läuft über Git, nicht über Anwendungscode:
    - `derived` – redaktionell abgeleitet → Ampel zeigt höchstens „Vorher prüfen“
    - `conflict` – Quellen widersprechen sich → immer „Vorher prüfen“, im PR begründen
    - `stale` – Prüfintervall abgelaufen → immer „Vorher prüfen“
-   - `internal` – ortsunabhängige Methodenvorlage ohne externe Quelle
+   - `internal` – ortsunabhängige Methodenvorlage ohne externe Quelle. Diese Einträge
+     erscheinen zusätzlich auf `vorlagen.html` und werden dort über das Feld
+     `environment` einsortiert: `indoor` = Schlechtwetter, `outdoor` = Schönwetter,
+     `mixed` = geht immer. Neue Vorlage anlegen = Katalogeintrag mit `status: internal`;
+     die Unterseite zieht sie automatisch.
 4. **Prüfdaten:** Bei jeder Prüfung `source_checked_on` aktualisieren und ein neues
    `next_review_on` setzen (Faustregel: Öffnung/Preis 90 Tage, saisonal 30 Tage,
    stabile Wege 180 Tage, interne Vorlagen 365 Tage). Ist `next_review_on`

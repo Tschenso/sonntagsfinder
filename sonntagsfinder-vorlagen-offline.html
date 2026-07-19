@@ -75,6 +75,13 @@
   .explain h2 { margin:0; font-size:1rem; color:var(--ink); }
   .explain .fine { font-size:.78rem; color:var(--muted); margin:0; }
 
+  .jump { display:flex; flex-wrap:wrap; gap:.45rem; }
+  .jump a { font-size:.8rem; font-weight:650; text-decoration:none; border:1px solid var(--line-2); background:var(--surface); color:var(--ink-2); padding:.35rem .7rem; border-radius:999px; }
+  .jump a:hover { background:var(--accent-soft); border-color:var(--accent); color:var(--accent-2); }
+
+  .wgroup { margin-bottom:2rem; scroll-margin-top:1rem; }
+  .wgroup > h2 { margin:0 0 .3rem; font-family:var(--serif); font-weight:600; font-size:1.35rem; display:flex; align-items:center; gap:.5rem; }
+  .wgroup > p.lead { margin:0 0 1rem; font-size:.88rem; color:var(--muted); max-width:60ch; }
   .grid { display:grid; gap:1.1rem; }
   .card { background:var(--surface); border:1px solid var(--line); border-radius:var(--r); box-shadow:var(--shadow); padding:1.1rem 1.2rem; display:grid; gap:.7rem; border-top:4px solid var(--accent); }
   .card h3 { margin:.1rem 0 0; font-size:1.15rem; }
@@ -103,7 +110,7 @@
 <body>
 <script>window.EMBEDDED_CATALOG = {
   "schema_version": 2,
-  "catalog_version": "2026-07-19.13",
+  "catalog_version": "2026-07-20.1",
   "note": "Öffentlicher Katalog des Sonntagsfinders Würzburg. Basis: redaktioneller Basiskatalog v1 (2026-07-15.1, 30 Einträge) plus 9 neue Einträge vom 2026-07-17 (6 regionale, 3 Fernziele mit booking_url). Änderungen bitte per Pull-Request, siehe README.",
   "activities": [
     {
@@ -3086,6 +3093,174 @@
         {"url": "https://www.schloss-thurn.de/oeffnungszeiten-und-preise/", "publisher": "Erlebnispark Schloss Thurn", "status": "official", "checked_on": "2026-07-19"},
         {"url": "https://www.schloss-thurn.de/", "publisher": "Erlebnispark Schloss Thurn", "status": "official", "checked_on": "2026-07-19"}
       ]
+    },
+    {
+      "seed_key": "kochwerkstatt",
+      "tags": ["regenfest"],
+      "title": "Kochwerkstatt: gemeinsam ein Menü stemmen",
+      "summary": "Einkaufen, schnippeln, kochen, essen, abräumen – alle übernehmen einen Abschnitt, niemand steht allein am Herd.",
+      "activity_type": "Ortsunabhängige Aktivitätsvorlage",
+      "locality": "In einer intern freigegebenen Küche",
+      "distance_from_wuerzburg_km": null,
+      "cost_status": "unknown",
+      "cost_per_person_cents": null,
+      "additional_costs": "",
+      "cost_valid_until": null,
+      "sunday_status": "unknown",
+      "sunday_text": "Küchennutzung und Einkaufsmöglichkeit am Sonntag vorher klären – viele Läden sind zu.",
+      "environment": "indoor",
+      "duration_min": 120,
+      "duration_max": 240,
+      "booking_required": null,
+      "step_free": null,
+      "accessibility_text": "",
+      "preparation_text": "Rezept, Mengen und Zuständigkeiten vorab festlegen. Allergien, Unverträglichkeiten und Speiseregeln vorher abfragen und still berücksichtigen, statt sie vor der Gruppe zu besprechen.",
+      "plan_b": "Kaltes Buffet ohne Herd oder Backen mit vorhandenen Vorräten.",
+      "pre_departure_checks": ["Allergien und Speiseregeln vorab klären", "Aufsicht an Herd und Messern regeln", "Einkauf und Budget vorher festlegen"],
+      "source_checked_on": "2026-07-20",
+      "next_review_on": "2027-07-20",
+      "booking_url": null,
+      "sources": [{"url": "", "publisher": "Interne Aktivitätsvorlage", "status": "internal", "checked_on": "2026-07-20"}]
+    },
+    {
+      "seed_key": "hoerspiel-werkstatt",
+      "tags": ["regenfest"],
+      "title": "Hörspiel selbst aufnehmen",
+      "summary": "Kurze Geschichte schreiben, Rollen und Geräusche verteilen, aufnehmen und gemeinsam anhören.",
+      "activity_type": "Ortsunabhängige Aktivitätsvorlage",
+      "locality": "In einem ruhigen, intern freigegebenen Raum",
+      "distance_from_wuerzburg_km": null,
+      "cost_status": "unknown",
+      "cost_per_person_cents": null,
+      "additional_costs": "",
+      "cost_valid_until": null,
+      "sunday_status": "unknown",
+      "sunday_text": "Nur von der Raumverfügbarkeit abhängig.",
+      "environment": "indoor",
+      "duration_min": 90,
+      "duration_max": 180,
+      "booking_required": null,
+      "step_free": null,
+      "accessibility_text": "",
+      "preparation_text": "Aufnahmegerät, Speicherort und Löschregel vorab festlegen. Mitwirken ist freiwillig: Wer nicht aufgenommen werden möchte, übernimmt Geräusche, Technik oder Text.",
+      "plan_b": "Die Geschichte live vorlesen statt aufnehmen.",
+      "pre_departure_checks": ["Einverständnis für Aufnahmen einholen", "Speicherort und Löschfrist festlegen", "Aufnahmen nicht ohne Zustimmung weitergeben"],
+      "source_checked_on": "2026-07-20",
+      "next_review_on": "2027-07-20",
+      "booking_url": null,
+      "sources": [{"url": "", "publisher": "Interne Aktivitätsvorlage", "status": "internal", "checked_on": "2026-07-20"}]
+    },
+    {
+      "seed_key": "werkstatt-restmaterial",
+      "tags": ["regenfest"],
+      "title": "Werkstatt aus Restmaterial",
+      "summary": "Aus Kartons, Stoffresten und Altpapier etwas Neues bauen – ohne Vorlage und ohne Bewertung des Ergebnisses.",
+      "activity_type": "Ortsunabhängige Aktivitätsvorlage",
+      "locality": "In einem intern freigegebenen Gruppenraum",
+      "distance_from_wuerzburg_km": null,
+      "cost_status": "unknown",
+      "cost_per_person_cents": null,
+      "additional_costs": "",
+      "cost_valid_until": null,
+      "sunday_status": "unknown",
+      "sunday_text": "Nur von der Raumverfügbarkeit abhängig.",
+      "environment": "indoor",
+      "duration_min": 90,
+      "duration_max": 180,
+      "booking_required": null,
+      "step_free": null,
+      "accessibility_text": "",
+      "preparation_text": "Material vorher sammeln und auf scharfe Kanten und Reste prüfen. Wer lieber sortiert, ordnet oder zuschaut, hat eine gleichwertige Rolle.",
+      "plan_b": "Gemeinsames Sortieren und Ordnen des Materials als eigene Aktion.",
+      "pre_departure_checks": ["Material auf Verletzungsrisiken prüfen", "Werkzeugnutzung und Aufsicht klären", "Ergebnisse nicht gegeneinander bewerten"],
+      "source_checked_on": "2026-07-20",
+      "next_review_on": "2027-07-20",
+      "booking_url": null,
+      "sources": [{"url": "", "publisher": "Interne Aktivitätsvorlage", "status": "internal", "checked_on": "2026-07-20"}]
+    },
+    {
+      "seed_key": "bewegungsparcours",
+      "tags": ["bewegung"],
+      "title": "Bewegungsparcours im Hof",
+      "summary": "Stationen aus vorhandenem Material: balancieren, werfen, springen, schätzen – gemeinsame Gesamtzeit statt Einzelwertung.",
+      "activity_type": "Ortsunabhängige Aktivitätsvorlage",
+      "locality": "Auf einem intern freigegebenen Hof oder Wiesenstück",
+      "distance_from_wuerzburg_km": null,
+      "cost_status": "unknown",
+      "cost_per_person_cents": null,
+      "additional_costs": "",
+      "cost_valid_until": null,
+      "sunday_status": "unknown",
+      "sunday_text": "Nur von Fläche und Wetter abhängig.",
+      "environment": "outdoor",
+      "duration_min": 60,
+      "duration_max": 120,
+      "booking_required": null,
+      "step_free": null,
+      "accessibility_text": "",
+      "preparation_text": "Stationen vorher selbst abgehen und Stolper-, Wurf- und Sturzrisiken entschärfen. Keine Bestenliste: Die Gruppe verbessert eine gemeinsame Zeit oder Punktzahl.",
+      "plan_b": "Stationen im Flur oder Gruppenraum mit weichem Material.",
+      "pre_departure_checks": ["Untergrund und Aufbau auf Sturzrisiken prüfen", "Stationen für unterschiedliche Beweglichkeit anbieten", "Keine Einzelrangliste führen"],
+      "source_checked_on": "2026-07-20",
+      "next_review_on": "2027-07-20",
+      "booking_url": null,
+      "sources": [{"url": "", "publisher": "Interne Aktivitätsvorlage", "status": "internal", "checked_on": "2026-07-20"}]
+    },
+    {
+      "seed_key": "wasserstationen-hof",
+      "tags": ["bewegung"],
+      "title": "Wasserstationen für heiße Tage",
+      "summary": "Schwämme, Eimer, Sprühflaschen und Zielwerfen im Schatten – Abkühlung ohne offenes Gewässer und ohne Badeaufsicht.",
+      "activity_type": "Ortsunabhängige Aktivitätsvorlage",
+      "locality": "Auf einem intern freigegebenen Hof mit Schattenplatz",
+      "distance_from_wuerzburg_km": null,
+      "cost_status": "unknown",
+      "cost_per_person_cents": null,
+      "additional_costs": "",
+      "cost_valid_until": null,
+      "sunday_status": "unknown",
+      "sunday_text": "Nur von Fläche, Wetter und Wasseranschluss abhängig.",
+      "environment": "outdoor",
+      "duration_min": 60,
+      "duration_max": 120,
+      "booking_required": null,
+      "step_free": null,
+      "accessibility_text": "",
+      "preparation_text": "Nur flache Behälter verwenden; ein Planschbecken oder offenes Gewässer braucht eine gesonderte Aufsichtsregelung und ist hier nicht gemeint. Schatten, Trinkwasser, Sonnenschutz und Wechselkleidung vorher bereitstellen.",
+      "plan_b": "Wasserstationen am Waschbecken oder Eiswürfelspiele im Schatten.",
+      "pre_departure_checks": ["Schatten, Trinkwasser und Sonnenschutz sicherstellen", "Mitmachen freiwillig lassen", "Rutschgefahr auf nassem Boden entschärfen"],
+      "source_checked_on": "2026-07-20",
+      "next_review_on": "2027-07-20",
+      "booking_url": null,
+      "sources": [{"url": "", "publisher": "Interne Aktivitätsvorlage", "status": "internal", "checked_on": "2026-07-20"}]
+    },
+    {
+      "seed_key": "stadtteil-interviews",
+      "tags": [],
+      "title": "Stadtteil-Interviews: Fragen an den eigenen Ort",
+      "summary": "Fragen zum Viertel sammeln, Antworten von freiwillig Mitmachenden einholen und anonym auf einem Plakat zusammentragen.",
+      "activity_type": "Ortsunabhängige Aktivitätsvorlage",
+      "locality": "Im eigenen Stadtteil, Route vorher festgelegt",
+      "distance_from_wuerzburg_km": null,
+      "cost_status": "unknown",
+      "cost_per_person_cents": null,
+      "additional_costs": "",
+      "cost_valid_until": null,
+      "sunday_status": "unknown",
+      "sunday_text": "Sonntags sind weniger Menschen unterwegs – Uhrzeit und Ort entsprechend wählen.",
+      "environment": "mixed",
+      "duration_min": 90,
+      "duration_max": 180,
+      "booking_required": null,
+      "step_free": null,
+      "accessibility_text": "",
+      "preparation_text": "Höchstens fünf kurze Fragen vorbereiten. Vorab erklären, dass niemand antworten muss und weder Namen noch Adressen oder Fotos erfasst werden. Antworten anonym auf Karten sammeln.",
+      "plan_b": "Interviews innerhalb der Gruppe oder mit Mitarbeitenden führen.",
+      "pre_departure_checks": ["Freiwilligkeit erklären und ein Nein akzeptieren", "Keine Namen, Adressen oder Fotos erfassen", "Route und Treffpunkt vorher festlegen"],
+      "source_checked_on": "2026-07-20",
+      "next_review_on": "2027-07-20",
+      "booking_url": null,
+      "sources": [{"url": "", "publisher": "Interne Aktivitätsvorlage", "status": "internal", "checked_on": "2026-07-20"}]
     }
   ]
 }
@@ -3108,7 +3283,8 @@
     </div>
     <div class="hero">
       <h1>Aktivitätsvorlagen ohne festes Ziel</h1>
-      <p class="dek">Nicht jeder Sonntag braucht einen Ausflug. Diese ortsunabhängigen Vorlagen aus dem redaktionellen Basiskatalog funktionieren im Gemeinschaftsraum, im Park nebenan oder unterwegs – mit Vorbereitung, Plan B und Checkliste.</p>
+      <p class="dek">Nicht jeder Sonntag braucht einen Ausflug. Diese ortsunabhängigen Vorlagen funktionieren im Gemeinschaftsraum, im Hof oder im Park nebenan – jede mit Vorbereitung, Plan B und Checkliste. Sortiert nach dem, was am Sonntagmorgen zuerst entscheidet: dem Wetter.</p>
+      <div class="jump" id="jump"></div>
     </div>
   </div>
 </header>
@@ -3116,7 +3292,8 @@
 <main class="wrap">
   <div class="explain">
     <h2>So sind die Vorlagen gedacht</h2>
-    <p style="margin:0">Jede Vorlage ist eine Methodenidee, kein Ort: Ihr wählt selbst, wo sie stattfindet, und prüft den Ort separat (Öffnung, Wetter, Freigabe). Die Vorlagen kommen ohne Personenbewertung, Ranglisten oder Fotoregeln-Verstöße aus – die Checkliste erinnert an die wichtigsten Punkte.</p>
+    <p style="margin:0">Jede Vorlage ist eine Methodenidee, kein Ort: Ihr wählt selbst, wo sie stattfindet, und prüft den Ort separat (Raumfreigabe, Wetter, Aufsicht). Die Vorlagen kommen ohne Personenbewertung und ohne Ranglisten aus; wo Fotos, Aufnahmen oder fremde Menschen ins Spiel kommen, steht die Einwilligung in der Checkliste.</p>
+    <p style="margin:0"><b>Schlechtwetter- oder Schönwetterprogramm?</b> Die Vorlagen sind danach gruppiert. Jede hat zusätzlich einen <b>Plan B</b> – bei den Draußen-Ideen ist das die Variante für den Fall, dass es doch regnet.</p>
     <p class="fine">Diese Einträge tragen den Quellenstatus „Interne Vorlage“: Es gibt bewusst keine externe Quelle, weil nichts Ortsgebundenes belegt werden muss.</p>
   </div>
 
@@ -3124,7 +3301,7 @@
     <b>Vorlagen konnten nicht geladen werden.</b><br>
     Diese Seite lädt ihre Daten aus <code>catalog.json</code> und braucht dafür einen Webserver.
   </div>
-  <div class="grid" id="grid"></div>
+  <div id="out"></div>
 </main>
 
 <footer class="site">
@@ -3174,6 +3351,26 @@ function isTemplate(a){
   return (a.sources || []).some(s => s.status === "internal");
 }
 
+/* Wettergruppen: das vorhandene environment-Feld entscheidet, wann eine
+   Vorlage praktisch in Frage kommt. Reihenfolge = Reihenfolge auf der Seite. */
+const GROUPS = [
+  { id:"schlechtwetter", env:"indoor",  icon:"☔", title:"Bei schlechtem Wetter",
+    lead:"Läuft komplett drinnen – Regen, Kälte oder Hitze spielen keine Rolle." },
+  { id:"schoenwetter",   env:"outdoor", icon:"☀️", title:"Bei gutem Wetter",
+    lead:"Draußen gedacht. Kippt das Wetter, greift der Plan B in der jeweiligen Karte." },
+  { id:"immer",          env:"mixed",   icon:"🌤", title:"Geht bei jedem Wetter",
+    lead:"Lässt sich drinnen wie draußen umsetzen – gut als kurzfristige Entscheidung." }
+];
+
+function groupBlock(g, items){
+  return `
+  <section class="wgroup" id="${g.id}">
+    <h2><span aria-hidden="true">${g.icon}</span> ${g.title} <span class="tag">${items.length}</span></h2>
+    <p class="lead">${g.lead}</p>
+    <div class="grid">${items.map(card).join("")}</div>
+  </section>`;
+}
+
 async function load(){
   try {
     let cat = window.EMBEDDED_CATALOG;
@@ -3184,7 +3381,16 @@ async function load(){
     }
     const templates = (cat.activities || []).filter(isTemplate);
     if (!templates.length) throw new Error("keine Vorlagen");
-    document.getElementById('grid').innerHTML = templates.map(card).join("");
+
+    const used = GROUPS.map(g => ({g, items: templates.filter(a => a.environment === g.env)}))
+                       .filter(x => x.items.length);
+    /* Sicherheitsnetz: unbekannte environment-Werte gehen nicht verloren */
+    const rest = templates.filter(a => !GROUPS.some(g => g.env === a.environment));
+    if (rest.length) used.push({g:{id:"sonstige", icon:"•", title:"Weitere Vorlagen", lead:""}, items:rest});
+
+    document.getElementById('out').innerHTML = used.map(x => groupBlock(x.g, x.items)).join("");
+    document.getElementById('jump').innerHTML = used
+      .map(x => `<a href="#${x.g.id}">${x.g.icon} ${x.g.title} (${x.items.length})</a>`).join("");
   } catch (e) {
     document.getElementById('loaderr').hidden = false;
   }
