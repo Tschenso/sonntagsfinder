@@ -77,8 +77,10 @@
   .layout { display:grid; grid-template-columns: 300px 1fr; gap:1.4rem; align-items:start; }
   @media (max-width: 880px){ .layout { grid-template-columns: 1fr; } }
 
-  .filters { position: sticky; top: .8rem; background:var(--surface); border:1px solid var(--line); border-radius:var(--r); box-shadow:var(--shadow); padding:1.1rem; display:grid; gap:1rem; }
-  @media (max-width: 880px){ .filters { position:static; } }
+  .filters { position: sticky; top: .8rem; max-height: calc(100vh - 1.6rem); overflow-y: auto; overscroll-behavior: contain; background:var(--surface); border:1px solid var(--line); border-radius:var(--r); box-shadow:var(--shadow); padding:1.1rem; display:grid; gap:1rem; scrollbar-width: thin; }
+  .filters::-webkit-scrollbar { width: 8px; }
+  .filters::-webkit-scrollbar-thumb { background: var(--line); border-radius: 4px; }
+  @media (max-width: 880px){ .filters { position:static; max-height:none; overflow:visible; } }
   .filters h2 { margin:0; font-size:.82rem; text-transform:uppercase; letter-spacing:.09em; color:var(--muted); }
   .field { display:grid; gap:.35rem; }
   .field label { font-size:.85rem; font-weight:650; }
