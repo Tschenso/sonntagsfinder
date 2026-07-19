@@ -36,21 +36,21 @@ Empfohlene Losgröße: 4–8 Kandidaten pro Redaktionslauf.
 | Lohr a. Main: Spessartmuseum („Schneewittchen“, Bahn) | spessartmuseum.de | museum-kultur, ohne-auto | ✓ aufgenommen 2026-07-19 (nur Barzahlung!) |
 | Wertheim: Altstadt & Burg | tourismus-wertheim.de | aussicht, museum-kultur | ✓ aufgenommen 2026-07-19 (Burg 2 €) |
 | Kloster Bronnbach (Taubertal) | kloster-bronnbach.de | museum-kultur, garten-park | ✓ aufgenommen 2026-07-19 (Preise nur als Bild → unknown; eigener Bahnhalt) |
-| Tauberbischofsheim: Altstadt (Bahn) | tauberbischofsheim.de | museum-kultur, ohne-auto | offen |
+| Tauberbischofsheim: Altstadt (Bahn) | main-tauber-kreis.de | museum-kultur, ohne-auto | ✓ aufgenommen 2026-07-19 (Türmersturm, Schloss mit Museum) |
 | Schloss & Garten Weikersheim (Bahn) | schloss-weikersheim.de | museum-kultur, garten-park, ohne-auto | ✓ aufgenommen 2026-07-19 (Schloss nur mit Führung, nicht barrierefrei) |
 | Kurpark Bad Mergentheim (Bahn) | bad-mergentheim.de | garten-park, ohne-auto | ✓ aufgenommen 2026-07-19 (kostenfrei; Wandelhalle im Umbau) |
 | Kitzingen: Altstadt & Falterturm (Bahn) | visit-kitzingen.de | museum-kultur, ohne-auto | → zurückgestellt 2026-07-19 (fast alles unbelegt; Falterturm-Innenzugang unklar, städt. Planungsprozess läuft) |
-| Marktbreit: Altort (Bahn) | marktbreit.de | museum-kultur, ohne-auto | offen |
-| Dettelbach: Altstadt & Wallfahrt | dettelbach.de | museum-kultur | offen |
+| Marktbreit: Altort (Bahn) | marktbreit.de | museum-kultur, ohne-auto | ✓ aufgenommen 2026-07-19 (Malerwinkel, Turmweg 1.200 m) |
+| Dettelbach: Altstadt & Wallfahrt | dettelbach.de | museum-kultur | ✓ aufgenommen 2026-07-19 (38 Türme; Bahnhalt 2 km; Mauer-Instandsetzung Süd) |
 | Schwanberg (Rödelsee): Aussicht & Park | kloster-schwanberg.de | aussicht, garten-park | ✓ aufgenommen 2026-07-19 (spendenbasiert; schließt bei Sturm) |
-| Sommerach: Altort & Weininsel | sommerach.de | aussicht | offen |
+| Sommerach: Altort & Weininsel | sommerach.de | aussicht | ✓ aufgenommen 2026-07-19 (kein Bahnhalt – Auto/Radweg) |
 | Abteikirche Münsterschwarzach | abtei-muensterschwarzach.de | museum-kultur, kostenlos | ✓ aufgenommen 2026-07-19 (Kirche täglich 5–20 Uhr) |
 | Volkach: Maria im Weingarten (Riemenschneider) | volkach.de | museum-kultur, aussicht | ✓ aufgenommen 2026-07-19 (Di/Mi + Nov–März zu) |
 | Ellertshäuser See (Stausee) | landkreis-schweinfurt.de | freibad-see | ✓ aufgenommen 2026-07-19 (Zugang/Kosten unbelegt; Wasserqualität amtlich ok) |
 | Steigerwald-Zentrum Handthal (kostenlos) | aelf-sw.bayern.de | wald-natur, wissenschaft | ✓ aufgenommen 2026-07-19 (Eintritt frei amtlich; Sommerzeiten prüfen) |
 | Kunsthalle Schweinfurt | kunsthalle-schweinfurt.de | museum-kultur, regenfest | ✓ aufgenommen 2026-07-19 (bis 16 J. frei, 1. Do frei) |
 | Iphofen: Altstadt & Stadtmauerrundgang (Bahn) | iphofen.de | aussicht, ohne-auto | offen |
-| Prichsenstadt: Altort | prichsenstadt.de | museum-kultur | offen |
+| Prichsenstadt: Altort | frankentourismus.de | museum-kultur | ✓ aufgenommen 2026-07-19 (Alte Schmiede 1242; kein Bahnhalt) |
 | Bad Kissingen: Kurgarten, Wandelhalle, Rosengarten (Bahn) | bad-kissingen.de | garten-park | ✓ aufgenommen 2026-07-19 (Wandelhalle täglich 7–18; Kostenfreiheit nicht zitierfähig → unknown) |
 | Schloss Aschach: Museen des Bezirks | museen-schloss-aschach.de | museum-kultur | offen |
 
