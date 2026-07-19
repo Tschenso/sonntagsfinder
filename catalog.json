@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "catalog_version": "2026-07-20.2",
+  "catalog_version": "2026-07-20.3",
   "note": "Öffentlicher Katalog des Sonntagsfinders Würzburg. Basis: redaktioneller Basiskatalog v1 (2026-07-15.1, 30 Einträge) plus 9 neue Einträge vom 2026-07-17 (6 regionale, 3 Fernziele mit booking_url). Änderungen bitte per Pull-Request, siehe README.",
   "activities": [
     {
@@ -1061,8 +1061,8 @@
       "pre_departure_checks": ["Gruppenreservierung bestätigen", "Schließtage prüfen", "Zugverbindung und Rückfahrt planen"],
       "source_checked_on": "2026-07-17",
       "next_review_on": "2026-10-15",
-      "booking_url": "https://buchung.experimenta.science/ticket-web-shop/relaunch/",
-      "sources": [{"url": "https://www.experimenta.science/besuchen/oeffnungszeiten-eintrittspreise/", "publisher": "experimenta gGmbH", "status": "official", "checked_on": "2026-07-17"}]
+      "booking_url": "https://buchung.experimenta.science/ticket-web-shop/relaunch/TicketAssistant",
+      "sources": [{"url": "https://www.experimenta.science/besuchen/oeffnungszeiten-eintrittspreise/", "publisher": "experimenta gGmbH", "status": "official", "checked_on": "2026-07-20"}]
     },
     {
       "seed_key": "playmobil-funpark",
@@ -2407,7 +2407,7 @@
     {
       "seed_key": "margetshoechheim-mainlaende",
       "title": "Mainlände Margetshöchheim mit Mainsteg",
-      "summary": "Neu gestaltetes Mainufer mit Wasserspielplatz (2024) – über den neuen Mainsteg direkt vom Bahnhalt Veitshöchheim.",
+      "summary": "Neu gestaltetes Mainufer – über den 2024 fertiggestellten Höchheimer Mainsteg direkt vom Bahnhalt Veitshöchheim.",
       "activity_type": "Mainufer und Spielplatz",
       "locality": "Margetshöchheim",
       "distance_from_wuerzburg_km": 8.0,
@@ -2417,22 +2417,21 @@
       "additional_costs": "",
       "cost_valid_until": null,
       "sunday_status": "confirmed",
-      "sunday_text": "Öffentliches Mainufer, jederzeit zugänglich; Wasserspielplatz an der Mainlände (fertiggestellt 2024).",
+      "sunday_text": "Öffentliches Mainufer, jederzeit zugänglich.",
       "environment": "outdoor",
       "duration_min": 60,
       "duration_max": 150,
       "booking_required": false,
       "step_free": null,
       "accessibility_text": "Neu gestaltete Uferwege; Details bei der Gemeinde.",
-      "preparation_text": "Bahn bis Veitshöchheim, über den Höchheimer Mainsteg (2024) ans andere Ufer; ideal mit Hofgarten Veitshöchheim kombinierbar; Wechselkleidung für den Wasserspielplatz.",
+      "preparation_text": "Bahn bis Veitshöchheim, über den Höchheimer Mainsteg (2024) ans andere Ufer; ideal mit Hofgarten Veitshöchheim kombinierbar. Am Ufer soll es einen neuen Spielplatz mit Wasserbereich geben – die Gemeindeseite dazu ist offline, also vor Ort prüfen und Wechselkleidung einpacken.",
       "plan_b": "Hofgarten Veitshöchheim (gegenüber).",
-      "pre_departure_checks": ["Wetter prüfen", "Wechselkleidung für Wasserspielplatz", "Rückfahrt klären"],
-      "source_checked_on": "2026-07-19",
-      "next_review_on": "2026-10-17",
+      "pre_departure_checks": ["Wetter prüfen", "Wechselkleidung einpacken (Spielplatz unbestätigt)", "Rückfahrt klären"],
+      "source_checked_on": "2026-07-20",
+      "next_review_on": "2026-10-18",
       "booking_url": null,
       "sources": [
-        {"url": "https://www.margetshoechheim.de/lernen-sie-uns-kennen/bauen-und-wohnen/umgestaltung-mainlaende", "publisher": "Gemeinde Margetshöchheim", "status": "official", "checked_on": "2026-07-19"},
-        {"url": "https://www.margetshoechheim.de/leben-erleben/kinderbetreuung-bildung-und-freizeitangebote/angebote-fuer-kinder-und-jugendliche/spiel-/bolzplaetze-und-freizeitanlagen", "publisher": "Gemeinde Margetshöchheim", "status": "official", "checked_on": "2026-07-19"}
+        {"url": "https://www.margetshoechheim.de/lernen-sie-uns-kennen/bauen-und-wohnen/umgestaltung-mainlaende", "publisher": "Gemeinde Margetshöchheim", "status": "official", "checked_on": "2026-07-20"}
       ]
     },
     {
