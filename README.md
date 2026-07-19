@@ -34,8 +34,12 @@ Eine inhaltliche Änderung ist immer eine Änderung an `catalog.json` oder `even
 - **Suche**: mehrere Suchwörter (UND-Verknüpfung), umlaut-tolerant („kappele“ findet „Käppele“),
   durchsucht Titel, Ort, Typ, Beschreibung und Vorbereitungshinweise.
 - **Filter**: Entfernung (Slider bis 120 km), Ausflugsstufe (Stadt ≤ 5 km / Umkreis ≤ 15 km /
-  Tagesausflug ≤ 50 km / **Fernziel > 50 km** / Vorlagen), Kategorien-Chips (Mehrfachauswahl),
+  Tagesausflug ≤ 50 km / **Fernziel > 50 km**), Kategorien-Chips (Mehrfachauswahl),
   verfügbare Zeit, Umgebung, „nur sonntags bestätigt / stufenfrei / kostenlos“.
+- **Zwei Bereiche**: Das Hauptraster zeigt ausschließlich **ortsgebundene Ausflugsziele**.
+  Ortsunabhängige Aktivitätsvorlagen stehen auf `vorlagen.html`; sie sind aus der Ampel-
+  statistik herausgehalten, weil sie ohne Ort dauerhaft „Vorher prüfen“ wären. Die
+  Trust-Zeile zählt beide Bereiche getrennt und verlinkt die Vorlagen.
 - **Kategorien**: Jeder Eintrag trägt ein redaktionell gepflegtes `tags`-Feld. Erlaubte Werte:
   `regenfest`, `tiere`, `hallenbad`, `freibad-see`, `wald-natur`, `garten-park`,
   `museum-kultur`, `wissenschaft`, `bewegung`, `aussicht`, `ohne-auto`. Bedeutung von `ohne-auto`:
@@ -136,10 +140,13 @@ Das Vier-Augen-Prinzip läuft über Git, nicht über Anwendungscode:
    - `conflict` – Quellen widersprechen sich → immer „Vorher prüfen“, im PR begründen
    - `stale` – Prüfintervall abgelaufen → immer „Vorher prüfen“
    - `internal` – ortsunabhängige Methodenvorlage ohne externe Quelle. Diese Einträge
-     erscheinen zusätzlich auf `vorlagen.html` und werden dort über das Feld
-     `environment` einsortiert: `indoor` = Schlechtwetter, `outdoor` = Schönwetter,
-     `mixed` = geht immer. Neue Vorlage anlegen = Katalogeintrag mit `status: internal`;
-     die Unterseite zieht sie automatisch.
+     erscheinen **ausschließlich** auf `vorlagen.html`, nicht im Hauptraster, und werden
+     dort über das Feld `environment` einsortiert: `indoor` = Schlechtwetter,
+     `outdoor` = Schönwetter, `mixed` = geht immer. Neue Vorlage anlegen = Katalogeintrag
+     mit `status: internal` und `distance_from_wuerzburg_km: null`; beide Seiten sortieren
+     automatisch richtig. Redaktionsregeln für Vorlagen: keine Personenbewertung, keine
+     Rangliste, Einwilligung in die Checkliste, wenn Fotos, Aufnahmen oder fremde Menschen
+     vorkommen; `plan_b` ist bei Draußen-Vorlagen die Schlechtwettervariante.
 4. **Prüfdaten:** Bei jeder Prüfung `source_checked_on` aktualisieren und ein neues
    `next_review_on` setzen (Faustregel: Öffnung/Preis 90 Tage, saisonal 30 Tage,
    stabile Wege 180 Tage, interne Vorlagen 365 Tage). Ist `next_review_on`

@@ -211,10 +211,10 @@
       <h1>Was geht am Sonntag?</h1>
       <p class="dek">Geprüfte, kostengünstige Ausflüge und Aktivitäten im Umkreis von Würzburg – für Gruppen und Familien. Stell dein Budget und deine Wegstrecke ein; die Ampel rechnet sofort. Jede Angabe zeigt Quelle und Prüfdatum.</p>
       <div class="trust">
-        <span>📚 <b id="cntA">–</b> kuratierte Einträge</span>
+        <span>📚 <b id="cntA">–</b> Ausflugsziele</span>
+        <span>💡 <a href="vorlagen.html"><b id="cntT">–</b> Vorlagen ohne Ziel</a></span>
         <span>🔗 <b id="cntS">–</b> verlinkte Quellen</span>
         <span>🕒 Datenstand <b id="cntV">–</b></span>
-        <span>💯 Meilenstein: 100 Einträge seit 19.07.2026</span>
         <span>🔒 keine Anmeldung · kein Tracking</span>
       </div>
     </div>
@@ -246,7 +246,7 @@
       <div class="field">
         <label for="rad">Max. Entfernung ab Würzburg</label>
         <div class="rng"><input type="range" id="rad" min="0" max="120" step="5" value="120"><output id="radOut">120 km</output></div>
-        <span class="hint">Straßenentfernung ab Hauptbahnhof (ca.-Werte). Ortsunabhängige Vorlagen bleiben immer sichtbar.</span>
+        <span class="hint">Straßenentfernung ab Hauptbahnhof (ca.-Werte).</span>
       </div>
       <div class="field">
         <label for="tier">Ausflugsstufe</label>
@@ -256,7 +256,6 @@
           <option value="umkreis">Umkreis (bis ca. 15 km)</option>
           <option value="tagesausflug">Tagesausflug (bis 50 km)</option>
           <option value="fern">Fernziel (über 50 km)</option>
-          <option value="vorlage">Ortsunabhängige Vorlagen</option>
         </select>
       </div>
       <div class="field">
@@ -566,10 +565,7 @@ function apply(){
     if (f.env && it.env !== f.env) return false;
     if (f.dur && it.dmin > +f.dur) return false;
     if (activeThemes.size && ![...activeThemes].some(t => it.tags.includes(t))) return false;
-    if (f.tier){
-      if (f.tier === "vorlage"){ if (it.dist != null) return false; }
-      else { if (it.dist == null || tierKey(it.dist) !== f.tier) return false; }
-    }
+    if (f.tier && (it.dist == null || tierKey(it.dist) !== f.tier)) return false;
     if (f.sunOnly && it.sun !== "confirmed") return false;
     if (f.accOnly && it.step !== true) return false;
     if (f.freeOnly && !(it.cost === "free" && it.cpp === 0)) return false;
@@ -648,9 +644,18 @@ function readState(str){
   ? Promise.resolve(window.EMBEDDED_CATALOG)
   : fetch("catalog.json").then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }))
   .then(cat => {
-    DATA = (cat.activities || []).map(mapEntry);
+    /* Ortsunabhängige Vorlagen (Quellenstatus "internal") haben eine eigene
+       Seite: vorlagen.html. Sie hier auszublenden hält die Ampelstatistik
+       ehrlich – ohne Ort könnten sie nie etwas anderes als "Vorher prüfen" sein. */
+    const alle = cat.activities || [];
+    const istVorlage = a => (a.sources || []).some(s => s.status === "internal");
+    const ausfluege = alle.filter(a => !istVorlage(a));
+    const vorlagen = alle.filter(istVorlage);
+
+    DATA = ausfluege.map(mapEntry);
     $("cntA").textContent = DATA.length;
-    $("cntS").textContent = (cat.activities || []).reduce((n,a)=>n+((a.sources||[]).length),0);
+    $("cntS").textContent = ausfluege.reduce((n,a)=>n+((a.sources||[]).length),0);
+    $("cntT").textContent = vorlagen.length;
     $("cntV").textContent = cat.catalog_version || "–";
     $("versionLine").textContent = "Katalogversion " + (cat.catalog_version || "?") +
       " · offene Ressource · Filter lassen sich als Link teilen (Adresszeile kopieren) · Einstellungen bleiben lokal im Browser." +
