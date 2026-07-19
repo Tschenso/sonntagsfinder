@@ -14,8 +14,8 @@ Empfohlene Losgröße: 4–8 Kandidaten pro Redaktionslauf.
 | Grafeneckart & Gedenkraum 16. März 1945 | wuerzburg.de | museum-kultur, kostenlos | ✓ aufgenommen 2026-07-19 (täglich, frei) |
 | Neumünster mit Lusamgärtchen | wuerzburg.de | museum-kultur | ✓ aufgenommen 2026-07-19 (täglich 6:30–18 Uhr) |
 | Domschatz Würzburg | museen.bistum-wuerzburg.de | museum-kultur, regenfest | offen |
-| Steinbachtal-Runde mit Waldspielplatz | wuerzburg.de | wald-natur | offen |
-| Sanderau: Mainpromenade & Graf-Luckner-Weiher | wuerzburg.de | garten-park | offen |
+| Steinbachtal-Runde mit Waldspielplatz | wuerzburg.de | wald-natur | ✓ aufgenommen 2026-07-19 (Lehrpfad 1,1 km, Bus 8; Waldspielplatz nur sekundär belegt) |
+| Sanderau: Mainpromenade & Graf-Luckner-Weiher | wuerzburg.de | garten-park | ✓ aufgenommen 2026-07-19 (Weiher heißt seit 2024 „Sander-Weiher“; Grillplatz Feggrube kostenlos) |
 
 ## Umkreis (bis ca. 15 km)
 
@@ -68,14 +68,14 @@ Empfohlene Losgröße: 4–8 Kandidaten pro Redaktionslauf.
 | Miltenberg: Altstadt (Westfrankenbahn) | miltenberg.info | museum-kultur, ohne-auto | ✓ aufgenommen 2026-07-19 (Museen: bis 14 J. frei, keine Kartenzahlung) |
 | Aschaffenburg: Schloss Johannisburg & Pompejanum | schloesser.bayern.de | museum-kultur | ✓ aufgenommen 2026-07-19 (unter 18 frei, Kombi 10 €) |
 | Aschaffenburg: Park Schönbusch | schloesser.bayern.de | garten-park | offen |
-| Wasserschloss Mespelbrunn (nur Auto) | schloss-mespelbrunn.de | museum-kultur | offen |
+| Wasserschloss Mespelbrunn (nur Auto) | schloss-mespelbrunn.de | museum-kultur | ✓ aufgenommen 2026-07-19 (nur mit Führung, nur Barzahlung; Saison bis 09.11.) |
 | Freilandmuseum Fladungen + Rhön-Zügle (saisonal) | freilandmuseum-fladungen.de | museum-kultur | ✓ aufgenommen 2026-07-19 (8 €, So 9–18, Winterpause) |
 | Kreuzberg (Rhön): Kloster & Winter-Rodelhänge | kloster-kreuzberg.de | aussicht, **Winter** | ✓ aufgenommen 2026-07-19 (Schänke So 10–18, Mo Ruhetag) |
 | Wasserkuppe (Rhön): Sommerrodelbahn & Segelflug | ski-und-rodelarena-wasserkuppe.de | bewegung, aussicht | ✓ aufgenommen 2026-07-19 (Rodel 4 €/3 €, Ampelsystem) |
 | Schwarzes Moor (Rhön): Bohlenpfad | biosphaerenreservat-rhoen.de | wald-natur | ✓ aufgenommen 2026-07-19 (rollstuhlgeeignet; Nov–Apr gesperrt) |
 | KissSalis Therme Bad Kissingen | kisssalis.de | hallenbad, regenfest | ✓ aufgenommen 2026-07-19 (sonntags kein Linienbus – nur AST) |
-| Freizeit-Land Geiselwind | freizeitlandgeiselwind.de | bewegung | offen |
-| Erlebnispark Schloss Thurn | schloss-thurn.de | bewegung | offen |
+| Freizeit-Land Geiselwind | freizeit-land.de | bewegung | ✓ aufgenommen 2026-07-19 (Preise/Öffnungstage nur als Bild → unknown/seasonal) |
+| Erlebnispark Schloss Thurn | schloss-thurn.de | bewegung | ✓ aufgenommen 2026-07-19 (online 38,90 €, Saison bis 11.10.; Öffnungstage nur als Bild) |
 
 ## Zurückgestellt (Grund dokumentiert)
 
