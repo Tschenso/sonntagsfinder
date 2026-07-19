@@ -12,7 +12,7 @@ Empfohlene Losgröße: 4–8 Kandidaten pro Redaktionslauf.
 |---|---|---|---|
 | Umweltstation der Stadt Würzburg (Zellerau) | wuerzburg.de | wissenschaft, regenfest | ✗ abgelehnt 2026-07-19 (sonntags geschlossen: Mo–Do 10–16:30, Fr –12:30) |
 | Grafeneckart & Gedenkraum 16. März 1945 | wuerzburg.de | museum-kultur, kostenlos | ✓ aufgenommen 2026-07-19 (täglich, frei) |
-| Neumünster mit Lusamgärtchen | bistum-wuerzburg.de | museum-kultur | offen |
+| Neumünster mit Lusamgärtchen | wuerzburg.de | museum-kultur | ✓ aufgenommen 2026-07-19 (täglich 6:30–18 Uhr) |
 | Domschatz Würzburg | museen.bistum-wuerzburg.de | museum-kultur, regenfest | offen |
 | Steinbachtal-Runde mit Waldspielplatz | wuerzburg.de | wald-natur | offen |
 | Sanderau: Mainpromenade & Graf-Luckner-Weiher | wuerzburg.de | garten-park | offen |
@@ -23,9 +23,9 @@ Empfohlene Losgröße: 4–8 Kandidaten pro Redaktionslauf.
 |---|---|---|---|
 | Margetshöchheim: Mainlände & Mainsteg (Bahn) | margetshoechheim.de | garten-park, ohne-auto | ✓ aufgenommen 2026-07-19 (Wasserspielplatz 2024, Steg via Veitshöchheim) |
 | Randersacker: Weinpanoramaweg & terroir f | terroir-f.com | aussicht | ✓ aufgenommen 2026-07-19 (Sonnenstuhlturm) |
-| Eibelstadt: Mainpromenade & Altort | eibelstadt.de | garten-park | offen |
-| Rimpar: Schloss Grumbach (Außenbereich) | rimpar.de | museum-kultur | offen |
-| Veitshöchheim: Mainlände & Fischerhäuser | tourismus-veitshoechheim.de | garten-park, ohne-auto | offen |
+| Eibelstadt: Mainpromenade & Altort | eibelstadt.de | garten-park | ✓ aufgenommen 2026-07-19 (Heimatmuseum So 14–16, Mai–Okt) |
+| Rimpar: Schloss Grumbach (Außenbereich) | schloss-grumbach.de | museum-kultur | ✓ aufgenommen 2026-07-19 (nur 14-tägig So 14–16!) |
+| Veitshöchheim: Mainlände & Fischerhäuser | tourismus-veitshoechheim.de | garten-park, ohne-auto | ✓ aufgenommen 2026-07-19 (Gold-Promenade, Minigolf, Spielplatz) |
 
 ## Tagesausflug (bis ca. 50 km)
 
@@ -49,10 +49,10 @@ Empfohlene Losgröße: 4–8 Kandidaten pro Redaktionslauf.
 | Ellertshäuser See (Stausee) | landkreis-schweinfurt.de | freibad-see | ✓ aufgenommen 2026-07-19 (Zugang/Kosten unbelegt; Wasserqualität amtlich ok) |
 | Steigerwald-Zentrum Handthal (kostenlos) | aelf-sw.bayern.de | wald-natur, wissenschaft | ✓ aufgenommen 2026-07-19 (Eintritt frei amtlich; Sommerzeiten prüfen) |
 | Kunsthalle Schweinfurt | kunsthalle-schweinfurt.de | museum-kultur, regenfest | ✓ aufgenommen 2026-07-19 (bis 16 J. frei, 1. Do frei) |
-| Iphofen: Altstadt & Stadtmauerrundgang (Bahn) | iphofen.de | aussicht, ohne-auto | offen |
+| Iphofen: Altstadt & Stadtmauerrundgang (Bahn) | iphofen.de | aussicht, ohne-auto | ✓ aufgenommen 2026-07-19 (Rödelseer Tor, 1,8-km-Mauerweg) |
 | Prichsenstadt: Altort | frankentourismus.de | museum-kultur | ✓ aufgenommen 2026-07-19 (Alte Schmiede 1242; kein Bahnhalt) |
 | Bad Kissingen: Kurgarten, Wandelhalle, Rosengarten (Bahn) | bad-kissingen.de | garten-park | ✓ aufgenommen 2026-07-19 (Wandelhalle täglich 7–18; Kostenfreiheit nicht zitierfähig → unknown) |
-| Schloss Aschach: Museen des Bezirks | museen-schloss-aschach.de | museum-kultur | offen |
+| Schloss Aschach: Museen des Bezirks | museen-schloss-aschach.de | museum-kultur | ✓ aufgenommen 2026-07-19 (So 11–17, 6 €/Familie 12 €) |
 
 ## Fernziel (über 50 km)
 
