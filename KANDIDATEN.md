@@ -31,14 +31,14 @@ Empfohlene Losgröße: 4–8 Kandidaten pro Redaktionslauf.
 
 | Kandidat | mögliche Quelle | Kategorien-Idee | Status |
 |---|---|---|---|
-| Karlstadt: Altstadt & Stadtmauer (Bahn) | karlstadt.de | museum-kultur, ohne-auto | offen |
+| Karlstadt: Altstadt & Stadtmauer (Bahn) | karlstadt.de | museum-kultur, ohne-auto | ✓ aufgenommen 2026-07-19 |
 | Gemünden: Scherenburgruine (Bahn) | gemuenden.de | aussicht, ohne-auto | offen |
-| Lohr a. Main: Spessartmuseum („Schneewittchen“, Bahn) | spessartmuseum.de | museum-kultur, ohne-auto | offen |
+| Lohr a. Main: Spessartmuseum („Schneewittchen“, Bahn) | spessartmuseum.de | museum-kultur, ohne-auto | ✓ aufgenommen 2026-07-19 (nur Barzahlung!) |
 | Wertheim: Altstadt & Burg | tourismus-wertheim.de | aussicht, museum-kultur | offen |
 | Kloster Bronnbach (Taubertal) | kloster-bronnbach.de | museum-kultur, garten-park | offen |
 | Tauberbischofsheim: Altstadt (Bahn) | tauberbischofsheim.de | museum-kultur, ohne-auto | offen |
-| Schloss & Garten Weikersheim (Bahn) | schloss-weikersheim.de | museum-kultur, garten-park, ohne-auto | offen |
-| Kurpark Bad Mergentheim (Bahn) | bad-mergentheim.de | garten-park, ohne-auto | offen |
+| Schloss & Garten Weikersheim (Bahn) | schloss-weikersheim.de | museum-kultur, garten-park, ohne-auto | ✓ aufgenommen 2026-07-19 (Schloss nur mit Führung, nicht barrierefrei) |
+| Kurpark Bad Mergentheim (Bahn) | bad-mergentheim.de | garten-park, ohne-auto | ✓ aufgenommen 2026-07-19 (kostenfrei; Wandelhalle im Umbau) |
 | Kitzingen: Altstadt & Falterturm (Bahn) | kitzingen.info | museum-kultur, ohne-auto | offen |
 | Marktbreit: Altort (Bahn) | marktbreit.de | museum-kultur, ohne-auto | offen |
 | Dettelbach: Altstadt & Wallfahrt | dettelbach.de | museum-kultur | offen |
