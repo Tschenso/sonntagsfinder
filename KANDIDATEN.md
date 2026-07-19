@@ -39,14 +39,14 @@ Empfohlene Losgröße: 4–8 Kandidaten pro Redaktionslauf.
 | Tauberbischofsheim: Altstadt (Bahn) | tauberbischofsheim.de | museum-kultur, ohne-auto | offen |
 | Schloss & Garten Weikersheim (Bahn) | schloss-weikersheim.de | museum-kultur, garten-park, ohne-auto | ✓ aufgenommen 2026-07-19 (Schloss nur mit Führung, nicht barrierefrei) |
 | Kurpark Bad Mergentheim (Bahn) | bad-mergentheim.de | garten-park, ohne-auto | ✓ aufgenommen 2026-07-19 (kostenfrei; Wandelhalle im Umbau) |
-| Kitzingen: Altstadt & Falterturm (Bahn) | kitzingen.info | museum-kultur, ohne-auto | offen |
+| Kitzingen: Altstadt & Falterturm (Bahn) | visit-kitzingen.de | museum-kultur, ohne-auto | → zurückgestellt 2026-07-19 (fast alles unbelegt; Falterturm-Innenzugang unklar, städt. Planungsprozess läuft) |
 | Marktbreit: Altort (Bahn) | marktbreit.de | museum-kultur, ohne-auto | offen |
 | Dettelbach: Altstadt & Wallfahrt | dettelbach.de | museum-kultur | offen |
-| Schwanberg (Rödelsee): Aussicht & Park | schwanberg.de | aussicht, garten-park | offen |
+| Schwanberg (Rödelsee): Aussicht & Park | kloster-schwanberg.de | aussicht, garten-park | ✓ aufgenommen 2026-07-19 (spendenbasiert; schließt bei Sturm) |
 | Sommerach: Altort & Weininsel | sommerach.de | aussicht | offen |
 | Abteikirche Münsterschwarzach | abtei-muensterschwarzach.de | museum-kultur, kostenlos | ✓ aufgenommen 2026-07-19 (Kirche täglich 5–20 Uhr) |
-| Volkach: Maria im Weingarten (Riemenschneider) | volkach.de | museum-kultur, aussicht | offen |
-| Ellertshäuser See (Stausee) | landkreis-schweinfurt.de | freibad-see | offen |
+| Volkach: Maria im Weingarten (Riemenschneider) | volkach.de | museum-kultur, aussicht | ✓ aufgenommen 2026-07-19 (Di/Mi + Nov–März zu) |
+| Ellertshäuser See (Stausee) | landkreis-schweinfurt.de | freibad-see | ✓ aufgenommen 2026-07-19 (Zugang/Kosten unbelegt; Wasserqualität amtlich ok) |
 | Steigerwald-Zentrum Handthal (kostenlos) | aelf-sw.bayern.de | wald-natur, wissenschaft | ✓ aufgenommen 2026-07-19 (Eintritt frei amtlich; Sommerzeiten prüfen) |
 | Kunsthalle Schweinfurt | kunsthalle-schweinfurt.de | museum-kultur, regenfest | ✓ aufgenommen 2026-07-19 (bis 16 J. frei, 1. Do frei) |
 | Iphofen: Altstadt & Stadtmauerrundgang (Bahn) | iphofen.de | aussicht, ohne-auto | offen |
@@ -58,22 +58,22 @@ Empfohlene Losgröße: 4–8 Kandidaten pro Redaktionslauf.
 
 | Kandidat | mögliche Quelle | Kategorien-Idee | Status |
 |---|---|---|---|
-| Rothenburg o. d. T.: Altstadt & Turmweg (Bahn) | rothenburg-tourismus.de | museum-kultur, aussicht, ohne-auto | offen |
-| Bamberg: Altstadt (UNESCO, Bahn direkt) | bamberg.info | museum-kultur, ohne-auto | offen |
+| Rothenburg o. d. T.: Altstadt & Turmweg (Bahn) | rothenburg.de | museum-kultur, aussicht, ohne-auto | ✓ aufgenommen 2026-07-19 (Wehrgang rund um die Uhr) |
+| Bamberg: Altstadt (UNESCO, Bahn direkt) | bamberg.info | museum-kultur, ohne-auto | ✓ aufgenommen 2026-07-19 (Altes Rathaus derzeit nur außen) |
 | Nürnberg: DB Museum (Bahn direkt) | dbmuseum.de | wissenschaft, regenfest, ohne-auto | ✓ aufgenommen 2026-07-19 |
 | Nürnberg: Tiergarten | tiergarten.nuernberg.de | tiere | ✓ aufgenommen 2026-07-19 |
 | Nürnberg: Kindermuseum (nur So/Sa!) | kindermuseum-nuernberg.de | wissenschaft, regenfest | ✓ aufgenommen 2026-07-19 (Sommerpause Jul–Sep!) |
 | Nürnberg: Erfahrungsfeld zur Entfaltung der Sinne (saisonal) | nuernberg.de | wissenschaft | offen |
 | Nürnberg: Germanisches Nationalmuseum | gnm.de | museum-kultur, regenfest | ✓ aufgenommen 2026-07-19 |
 | Miltenberg: Altstadt (Westfrankenbahn) | miltenberg.info | museum-kultur, ohne-auto | ✓ aufgenommen 2026-07-19 (Museen: bis 14 J. frei, keine Kartenzahlung) |
-| Aschaffenburg: Schloss Johannisburg & Pompejanum | schloesser.bayern.de | museum-kultur | offen |
+| Aschaffenburg: Schloss Johannisburg & Pompejanum | schloesser.bayern.de | museum-kultur | ✓ aufgenommen 2026-07-19 (unter 18 frei, Kombi 10 €) |
 | Aschaffenburg: Park Schönbusch | schloesser.bayern.de | garten-park | offen |
 | Wasserschloss Mespelbrunn (nur Auto) | schloss-mespelbrunn.de | museum-kultur | offen |
 | Freilandmuseum Fladungen + Rhön-Zügle (saisonal) | freilandmuseum-fladungen.de | museum-kultur | offen |
 | Kreuzberg (Rhön): Kloster & Winter-Rodelhänge | kloster-kreuzberg.de | aussicht, **Winter** | offen |
 | Wasserkuppe (Rhön): Sommerrodelbahn & Segelflug | wasserkuppe.com | bewegung, aussicht | offen |
 | Schwarzes Moor (Rhön): Bohlenpfad | biosphaerenreservat-rhoen.de | wald-natur | offen |
-| KissSalis Therme Bad Kissingen | kisssalis.de | hallenbad, regenfest | offen |
+| KissSalis Therme Bad Kissingen | kisssalis.de | hallenbad, regenfest | ✓ aufgenommen 2026-07-19 (sonntags kein Linienbus – nur AST) |
 | Freizeit-Land Geiselwind | freizeitlandgeiselwind.de | bewegung | offen |
 | Erlebnispark Schloss Thurn | schloss-thurn.de | bewegung | offen |
 
