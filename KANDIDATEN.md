@@ -10,8 +10,8 @@ Empfohlene Losgröße: 4–8 Kandidaten pro Redaktionslauf.
 
 | Kandidat | mögliche Quelle | Kategorien-Idee | Status |
 |---|---|---|---|
-| Umweltstation der Stadt Würzburg (Zellerau) | wuerzburg.de | wissenschaft, regenfest | offen |
-| Grafeneckart & Gedenkraum 16. März 1945 | wuerzburg.de | museum-kultur, kostenlos | offen |
+| Umweltstation der Stadt Würzburg (Zellerau) | wuerzburg.de | wissenschaft, regenfest | ✗ abgelehnt 2026-07-19 (sonntags geschlossen: Mo–Do 10–16:30, Fr –12:30) |
+| Grafeneckart & Gedenkraum 16. März 1945 | wuerzburg.de | museum-kultur, kostenlos | ✓ aufgenommen 2026-07-19 (täglich, frei) |
 | Neumünster mit Lusamgärtchen | bistum-wuerzburg.de | museum-kultur | offen |
 | Domschatz Würzburg | museen.bistum-wuerzburg.de | museum-kultur, regenfest | offen |
 | Steinbachtal-Runde mit Waldspielplatz | wuerzburg.de | wald-natur | offen |
@@ -21,8 +21,8 @@ Empfohlene Losgröße: 4–8 Kandidaten pro Redaktionslauf.
 
 | Kandidat | mögliche Quelle | Kategorien-Idee | Status |
 |---|---|---|---|
-| Margetshöchheim: Mainlände & Mainsteg (Bahn) | margetshoechheim.de | aussicht, ohne-auto | offen |
-| Randersacker: Weinpanoramaweg & terroir f | randersacker.de | aussicht | offen |
+| Margetshöchheim: Mainlände & Mainsteg (Bahn) | margetshoechheim.de | garten-park, ohne-auto | ✓ aufgenommen 2026-07-19 (Wasserspielplatz 2024, Steg via Veitshöchheim) |
+| Randersacker: Weinpanoramaweg & terroir f | terroir-f.com | aussicht | ✓ aufgenommen 2026-07-19 (Sonnenstuhlturm) |
 | Eibelstadt: Mainpromenade & Altort | eibelstadt.de | garten-park | offen |
 | Rimpar: Schloss Grumbach (Außenbereich) | rimpar.de | museum-kultur | offen |
 | Veitshöchheim: Mainlände & Fischerhäuser | tourismus-veitshoechheim.de | garten-park, ohne-auto | offen |
@@ -69,10 +69,10 @@ Empfohlene Losgröße: 4–8 Kandidaten pro Redaktionslauf.
 | Aschaffenburg: Schloss Johannisburg & Pompejanum | schloesser.bayern.de | museum-kultur | ✓ aufgenommen 2026-07-19 (unter 18 frei, Kombi 10 €) |
 | Aschaffenburg: Park Schönbusch | schloesser.bayern.de | garten-park | offen |
 | Wasserschloss Mespelbrunn (nur Auto) | schloss-mespelbrunn.de | museum-kultur | offen |
-| Freilandmuseum Fladungen + Rhön-Zügle (saisonal) | freilandmuseum-fladungen.de | museum-kultur | offen |
-| Kreuzberg (Rhön): Kloster & Winter-Rodelhänge | kloster-kreuzberg.de | aussicht, **Winter** | offen |
-| Wasserkuppe (Rhön): Sommerrodelbahn & Segelflug | wasserkuppe.com | bewegung, aussicht | offen |
-| Schwarzes Moor (Rhön): Bohlenpfad | biosphaerenreservat-rhoen.de | wald-natur | offen |
+| Freilandmuseum Fladungen + Rhön-Zügle (saisonal) | freilandmuseum-fladungen.de | museum-kultur | ✓ aufgenommen 2026-07-19 (8 €, So 9–18, Winterpause) |
+| Kreuzberg (Rhön): Kloster & Winter-Rodelhänge | kloster-kreuzberg.de | aussicht, **Winter** | ✓ aufgenommen 2026-07-19 (Schänke So 10–18, Mo Ruhetag) |
+| Wasserkuppe (Rhön): Sommerrodelbahn & Segelflug | ski-und-rodelarena-wasserkuppe.de | bewegung, aussicht | ✓ aufgenommen 2026-07-19 (Rodel 4 €/3 €, Ampelsystem) |
+| Schwarzes Moor (Rhön): Bohlenpfad | biosphaerenreservat-rhoen.de | wald-natur | ✓ aufgenommen 2026-07-19 (rollstuhlgeeignet; Nov–Apr gesperrt) |
 | KissSalis Therme Bad Kissingen | kisssalis.de | hallenbad, regenfest | ✓ aufgenommen 2026-07-19 (sonntags kein Linienbus – nur AST) |
 | Freizeit-Land Geiselwind | freizeitlandgeiselwind.de | bewegung | offen |
 | Erlebnispark Schloss Thurn | schloss-thurn.de | bewegung | offen |
