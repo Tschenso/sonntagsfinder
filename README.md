@@ -16,10 +16,12 @@ Es wird nichts gespeichert und nichts übertragen.
 | Datei | Zweck |
 |---|---|
 | `index.html` | komplette Website (Layout, Filter, Ampellogik) – ohne Build-Step |
+| `vorlagen.html` | Unterseite: ortsunabhängige Aktivitätsvorlagen (Sonntage ohne Ausflug) |
 | `catalog.json` | **die Datenquelle**: alle Einträge, Quellen und Prüfdaten |
 | `events.json` | kuratierte, zeitlich begrenzte Hinweise (laufen automatisch ab) |
-| `sonntagsfinder-offline.html` | **Offline-Ausgabe**: eine doppelklickbare Datei mit eingebetteten Daten |
-| `make-offline.ps1` | erzeugt die Offline-Ausgabe neu aus `index.html` + JSON-Dateien |
+| `sonntagsfinder-offline.html` | **Offline-Ausgabe**: doppelklickbare Bibliothek mit eingebetteten Daten |
+| `sonntagsfinder-vorlagen-offline.html` | Offline-Ausgabe der Vorlagenseite |
+| `make-offline.ps1` | erzeugt beide Offline-Dateien neu aus den HTML- + JSON-Dateien |
 | `check-links.ps1` | Redaktionswerkzeug: prüft alle Quell-/Booking-URLs und listet fällige Reviews |
 | `KANDIDATEN.md` | redaktioneller Arbeitsvorrat auf dem Weg zu ~100 Einträgen (unverifiziert) |
 | `README.md` | dieses Dokument |
@@ -73,6 +75,8 @@ Veranstaltungskalender (Stadt, Landkreis, Frankentourismus) – die brauchen kei
 `sonntagsfinder-offline.html` ist die komplette Website als **eine Datei mit
 eingebetteten Daten** – einfach doppelklicken, sie öffnet sich im Browser und
 funktioniert vollständig offline (Filter, Ampel, Suche, gespeicherte Einstellungen).
+`sonntagsfinder-vorlagen-offline.html` enthält dieselbe Vorlagenseite. Jede Datei
+läuft für sich; der Wechsel zwischen beiden klappt nur, wenn sie im selben Ordner liegen.
 
 - **Weitergeben:** Datei per USB-Stick, internem Laufwerk oder Mailanhang verteilen –
   keine Installation, keine Rechte, kein IT-Aufwand.

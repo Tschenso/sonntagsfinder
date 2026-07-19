@@ -66,6 +66,8 @@
   .logo b { font-size:1.02rem; letter-spacing:-.01em; }
   .logo span { display:block; font-size:.72rem; color:var(--muted); }
   .theme-btn { appearance:none; border:1px solid var(--line-2); background:var(--surface); color:var(--ink); width:38px; height:38px; border-radius:10px; cursor:pointer; font-size:1.05rem; }
+  .nav-link { font-size:.83rem; font-weight:650; text-decoration:none; border:1px solid var(--line-2); background:var(--surface); color:var(--ink-2); padding:.45rem .8rem; border-radius:10px; white-space:nowrap; }
+  .nav-link:hover { background:var(--accent-soft); border-color:var(--accent); color:var(--accent-2); }
   .hero { padding: 1.4rem 0 2rem; display:grid; gap:1rem; }
   .hero h1 { font-family: var(--serif); font-weight:600; font-size: clamp(1.9rem, 1.2rem + 3vw, 3.1rem); margin:0; letter-spacing:-.015em; }
   .hero p.dek { margin:0; max-width: 62ch; font-size:1.08rem; color:var(--ink-2); }
@@ -179,7 +181,7 @@
   .disclaimer { background:var(--check-soft); border:1px solid color-mix(in srgb, var(--check) 25%, transparent); border-radius:10px; padding:.7rem .9rem; font-size:.82rem; color:var(--ink-2); }
 
   @media print {
-    .filters, .sortbar, .theme-btn, .presets, .explain, .skip, .tally { display:none !important; }
+    .filters, .sortbar, .theme-btn, .nav-link, .presets, .explain, .skip, .tally { display:none !important; }
     header.site { background:none; border:0; }
     .hero { padding-bottom:.5rem; }
     .layout { grid-template-columns:1fr; }
@@ -202,6 +204,7 @@
         <div class="sun" aria-hidden="true"></div>
         <div><b>Sonntagsfinder Würzburg</b><span>Kuratierte Ausflüge · offene Ressource</span></div>
       </div>
+      <a class="nav-link" href="vorlagen.html">💡 Vorlagen ohne Ziel</a>
       <button class="theme-btn" id="theme" aria-label="Hell/Dunkel umschalten" title="Hell/Dunkel">◐</button>
     </div>
     <div class="hero">
@@ -366,6 +369,7 @@
     <p>Der Sonntagsfinder ist eine offene, redaktionell gepflegte Sammlung. Er entscheidet <b>nicht</b>, ob ein Ausflug für eine bestimmte Person oder Gruppe pädagogisch, gesundheitlich oder aufsichtlich geeignet ist – das bleibt eure Verantwortung. Es werden keine Konten, keine Standort- und keine Personendaten erhoben.</p>
     <p class="disclaimer"><b>Immer vor der Abfahrt prüfen:</b> Öffnung, Preis, Zugang und Rückfahrt können sich kurzfristig ändern. Die verlinkte Quelle und das Prüfdatum sind maßgeblich – die Ampel ist nur eine schnelle Vorabhilfe.</p>
     <p>Kartendaten &amp; Entfernungen basieren u. a. auf © <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap-Mitwirkende (ODbL)</a>. Fehlt etwas oder ist eine Angabe veraltet? <a id="contactLink" href="#">Info melden</a>.</p>
+    <p>Kein Ausflug geplant? Die <a href="vorlagen.html">Aktivitätsvorlagen ohne festes Ziel</a> funktionieren im Gemeinschaftsraum oder im Park nebenan.</p>
     <p style="color:var(--muted)" id="versionLine">Offene Ressource · Filter lassen sich als Link teilen (Adresszeile kopieren) · Einstellungen bleiben lokal im Browser.</p>
   </div>
 </footer>

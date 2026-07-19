@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aktivitätsvorlagen – Sonntagsfinder Würzburg</title>
+<meta name="description" content="Ortsunabhängige Aktivitätsvorlagen des Sonntagsfinders: Programmideen für Sonntage ohne festes Ausflugsziel – mit Vorbereitung, Plan B und Checkliste.">
+
+<style>
+  :root {
+    color-scheme: light;
+    --ink: #1a2620; --ink-2: #43524a; --muted: #68766d;
+    --paper: #f6f8f4; --surface: #ffffff; --surface-2: #eef3ec;
+    --line: #d6e0d8; --line-2: #c2cfc5;
+    --accent: #216b4e; --accent-2: #17513a; --accent-soft: #e1f0e7;
+    --sun: #c98a12; --sun-soft: #fbeecb;
+    --ok: #1f7a4d; --ok-soft: #e2f2e8;
+    --check: #9a6512; --check-soft: #fbeecb;
+    --no: #9f3a2c; --no-soft: #f6e5e1;
+    --focus: #0a63d6;
+    --shadow: 0 1px 2px rgba(20,40,30,.05), 0 10px 28px rgba(20,40,30,.06);
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --r: 14px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark;
+      --ink: #e7efe8; --ink-2: #b1c0b6; --muted: #869488;
+      --paper: #0d120f; --surface: #151c17; --surface-2: #1b2420;
+      --line: #29342d; --line-2: #38453d;
+      --accent: #57c091; --accent-2: #7fd6ac; --accent-soft: #15271e;
+      --sun: #e2ab53; --sun-soft: #2b2313;
+      --ok: #58c187; --ok-soft: #14271c;
+      --check: #e0a94e; --check-soft: #2b2313;
+      --no: #e88a78; --no-soft: #2e1a16;
+      --focus: #6ea8ff;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 32px rgba(0,0,0,.4);
+    }
+  }
+  :root[data-theme="light"] { color-scheme: light;
+    --ink:#1a2620;--ink-2:#43524a;--muted:#68766d;--paper:#f6f8f4;--surface:#fff;--surface-2:#eef3ec;
+    --line:#d6e0d8;--line-2:#c2cfc5;--accent:#216b4e;--accent-2:#17513a;--accent-soft:#e1f0e7;
+    --sun:#c98a12;--sun-soft:#fbeecb;--ok:#1f7a4d;--ok-soft:#e2f2e8;--check:#9a6512;--check-soft:#fbeecb;
+    --no:#9f3a2c;--no-soft:#f6e5e1;--focus:#0a63d6;--shadow:0 1px 2px rgba(20,40,30,.05),0 10px 28px rgba(20,40,30,.06); }
+  :root[data-theme="dark"] { color-scheme: dark;
+    --ink:#e7efe8;--ink-2:#b1c0b6;--muted:#869488;--paper:#0d120f;--surface:#151c17;--surface-2:#1b2420;
+    --line:#29342d;--line-2:#38453d;--accent:#57c091;--accent-2:#7fd6ac;--accent-soft:#15271e;
+    --sun:#e2ab53;--sun-soft:#2b2313;--ok:#58c187;--ok-soft:#14271c;--check:#e0a94e;--check-soft:#2b2313;
+    --no:#e88a78;--no-soft:#2e1a16;--focus:#6ea8ff;--shadow:0 1px 2px rgba(0,0,0,.3),0 12px 32px rgba(0,0,0,.4); }
+
+  * { box-sizing: border-box; }
+  html { font-family: var(--sans); line-height: 1.55; color: var(--ink); background: var(--paper); -webkit-text-size-adjust: 100%; }
+  body { margin: 0; }
+  h1,h2,h3 { text-wrap: balance; line-height: 1.18; }
+  a { color: var(--accent-2); }
+  :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
+  .wrap { width: min(880px, calc(100% - 2rem)); margin-inline: auto; }
+
+  header.site { background: linear-gradient(175deg, var(--accent-soft), transparent 70%); border-bottom: 1px solid var(--line); }
+  .site-top { display:flex; align-items:center; gap:1rem; padding:.9rem 0; }
+  .logo { display:flex; align-items:center; gap:.6rem; margin-right:auto; text-decoration:none; color:inherit; }
+  .logo .sun { width:34px; height:34px; border-radius:50%; background:radial-gradient(circle at 40% 35%, var(--sun), #b5760a); flex:none; box-shadow: 0 0 0 4px var(--sun-soft); }
+  .logo b { font-size:1.02rem; letter-spacing:-.01em; }
+  .logo span { display:block; font-size:.72rem; color:var(--muted); }
+  .nav-link { font-size:.83rem; font-weight:650; text-decoration:none; border:1px solid var(--line-2); background:var(--surface); color:var(--ink-2); padding:.45rem .8rem; border-radius:10px; }
+  .nav-link:hover { background:var(--accent-soft); border-color:var(--accent); color:var(--accent-2); }
+  .theme-btn { appearance:none; border:1px solid var(--line-2); background:var(--surface); color:var(--ink); width:38px; height:38px; border-radius:10px; cursor:pointer; font-size:1.05rem; }
+  .hero { padding: 1.4rem 0 2rem; display:grid; gap:1rem; }
+  .hero h1 { font-family: var(--serif); font-weight:600; font-size: clamp(1.7rem, 1.1rem + 2.6vw, 2.6rem); margin:0; letter-spacing:-.015em; }
+  .hero p.dek { margin:0; max-width: 62ch; font-size:1.05rem; color:var(--ink-2); }
+
+  main { padding-block: 1.6rem 4rem; }
+  .explain { background:var(--surface); border:1px solid var(--line); border-left:5px solid var(--accent); border-radius:var(--r); padding:1rem 1.15rem; margin-bottom:1.4rem; display:grid; gap:.6rem; font-size:.9rem; color:var(--ink-2); }
+  .explain h2 { margin:0; font-size:1rem; color:var(--ink); }
+  .explain .fine { font-size:.78rem; color:var(--muted); margin:0; }
+
+  .grid { display:grid; gap:1.1rem; }
+  .card { background:var(--surface); border:1px solid var(--line); border-radius:var(--r); box-shadow:var(--shadow); padding:1.1rem 1.2rem; display:grid; gap:.7rem; border-top:4px solid var(--accent); }
+  .card h3 { margin:.1rem 0 0; font-size:1.15rem; }
+  .card .type { margin:0; font-size:.78rem; color:var(--muted); }
+  .card .sum { margin:0; font-size:.92rem; color:var(--ink-2); }
+  .tags { display:flex; flex-wrap:wrap; gap:.35rem; }
+  .tag { font-size:.72rem; font-weight:650; padding:.14rem .5rem; border-radius:999px; border:1px solid var(--line-2); color:var(--ink-2); background:var(--surface-2); }
+  .blk { font-size:.88rem; }
+  .blk b { display:block; font-size:.74rem; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); margin-bottom:.15rem; }
+  .checklist { margin:.1rem 0 0; padding-left:1.1rem; display:grid; gap:.2rem; }
+  .src { border:1px solid var(--line); border-radius:10px; padding:.6rem .7rem; background:var(--paper); font-size:.82rem; display:grid; gap:.3rem; }
+  .src .st { display:inline-flex; align-items:center; gap:.35rem; font-weight:700; font-size:.72rem; padding:.1rem .45rem; border-radius:999px; width:max-content; background:var(--check-soft); color:var(--check); }
+  .loaderr { max-width:640px; margin:3rem auto; padding:1.2rem 1.4rem; border:1px solid var(--line); border-left:5px solid var(--no); border-radius:var(--r); background:var(--surface); font-size:.92rem; }
+  .loaderr code { background:var(--surface-2); padding:.1rem .4rem; border-radius:5px; }
+
+  footer.site { border-top:1px solid var(--line); background:var(--surface-2); margin-top:2rem; }
+  footer.site .inner { padding:1.6rem 0 2.4rem; display:grid; gap:.7rem; font-size:.83rem; color:var(--ink-2); }
+  footer.site h2 { margin:0; font-size:.95rem; }
+
+  @media print {
+    .theme-btn, .nav-link { display:none !important; }
+    .card { break-inside: avoid; box-shadow:none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <div class="site-top">
+      <a class="logo" href="./">
+        <div class="sun" aria-hidden="true"></div>
+        <div><b>Sonntagsfinder Würzburg</b><span>Kuratierte Ausflüge · offene Ressource</span></div>
+      </a>
+      <a class="nav-link" href="./">← Alle Ausflüge</a>
+      <button class="theme-btn" id="theme" aria-label="Hell/Dunkel umschalten" title="Hell/Dunkel">◐</button>
+    </div>
+    <div class="hero">
+      <h1>Aktivitätsvorlagen ohne festes Ziel</h1>
+      <p class="dek">Nicht jeder Sonntag braucht einen Ausflug. Diese ortsunabhängigen Vorlagen aus dem redaktionellen Basiskatalog funktionieren im Gemeinschaftsraum, im Park nebenan oder unterwegs – mit Vorbereitung, Plan B und Checkliste.</p>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="explain">
+    <h2>So sind die Vorlagen gedacht</h2>
+    <p style="margin:0">Jede Vorlage ist eine Methodenidee, kein Ort: Ihr wählt selbst, wo sie stattfindet, und prüft den Ort separat (Öffnung, Wetter, Freigabe). Die Vorlagen kommen ohne Personenbewertung, Ranglisten oder Fotoregeln-Verstöße aus – die Checkliste erinnert an die wichtigsten Punkte.</p>
+    <p class="fine">Diese Einträge tragen den Quellenstatus „Interne Vorlage“: Es gibt bewusst keine externe Quelle, weil nichts Ortsgebundenes belegt werden muss.</p>
+  </div>
+
+  <div class="loaderr" id="loaderr" hidden>
+    <b>Vorlagen konnten nicht geladen werden.</b><br>
+    Diese Seite lädt ihre Daten aus <code>catalog.json</code> und braucht dafür einen Webserver.
+  </div>
+  <div class="grid" id="grid"></div>
+</main>
+
+<footer class="site">
+  <div class="wrap inner">
+    <h2>Über diese Seite</h2>
+    <p>Die Vorlagen sind Teil des Sonntagsfinder-Katalogs und werden redaktionell gepflegt. Ob eine Aktivität für eine bestimmte Person oder Gruppe geeignet ist, bleibt eure Verantwortung. Es werden keine Konten, keine Standort- und keine Personendaten erhoben.</p>
+    <p><a href="./">Zurück zur Ausflugs-Bibliothek</a></p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('theme').addEventListener('click', () => {
+  const r = document.documentElement;
+  const cur = r.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  r.setAttribute('data-theme', cur === 'dark' ? 'light' : 'dark');
+});
+
+const esc = s => (s==null?"":String(s)).replace(/[&<>"]/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[m]));
+const ENV = {indoor:"Drinnen",outdoor:"Draußen",mixed:"Drinnen oder draußen"};
+
+function card(a){
+  const checks = (a.pre_departure_checks || []).map(c=>`<li>${esc(c)}</li>`).join("");
+  return `
+  <article class="card">
+    <div>
+      <h3>${esc(a.title)}</h3>
+      <p class="type">${esc(a.activity_type)} · ${esc(a.locality)}</p>
+    </div>
+    <p class="sum">${esc(a.summary)}</p>
+    <div class="tags">
+      <span class="tag">${ENV[a.environment] || esc(a.environment)}</span>
+      <span class="tag">${a.duration_min}–${a.duration_max} Min.</span>
+      <span class="tag">Ortsunabhängig</span>
+    </div>
+    <div class="blk"><b>Vorbereitung</b>${esc(a.preparation_text)}</div>
+    <div class="blk"><b>Plan B</b>${esc(a.plan_b)}</div>
+    <div class="blk"><b>Vorher klären</b><ul class="checklist">${checks}</ul></div>
+    <div class="src">
+      <span class="st">Interne Vorlage</span>
+      <div>Ortsunabhängige Methodenvorlage aus dem Basiskatalog – der gewählte Ort wird separat geprüft.</div>
+      <div>Zuletzt geprüft: ${esc(a.source_checked_on)}</div>
+    </div>
+  </article>`;
+}
+
+function isTemplate(a){
+  return (a.sources || []).some(s => s.status === "internal");
+}
+
+async function load(){
+  try {
+    let cat = window.EMBEDDED_CATALOG;
+    if (!cat) {
+      const res = await fetch("catalog.json", {cache:"no-cache"});
+      if (!res.ok) throw new Error(res.status);
+      cat = await res.json();
+    }
+    const templates = (cat.activities || []).filter(isTemplate);
+    if (!templates.length) throw new Error("keine Vorlagen");
+    document.getElementById('grid').innerHTML = templates.map(card).join("");
+  } catch (e) {
+    document.getElementById('loaderr').hidden = false;
+  }
+}
+load();
+</script>
+</body>
+</html>
