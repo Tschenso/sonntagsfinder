@@ -32,10 +32,10 @@ Empfohlene Losgröße: 4–8 Kandidaten pro Redaktionslauf.
 | Kandidat | mögliche Quelle | Kategorien-Idee | Status |
 |---|---|---|---|
 | Karlstadt: Altstadt & Stadtmauer (Bahn) | karlstadt.de | museum-kultur, ohne-auto | ✓ aufgenommen 2026-07-19 |
-| Gemünden: Scherenburgruine (Bahn) | gemuenden.de | aussicht, ohne-auto | offen |
+| Gemünden: Scherenburgruine (Bahn) | stadt-gemuenden.de | aussicht | ✓ aufgenommen 2026-07-19 (Zugang/Kosten unbelegt; Turm gesperrt, Festspiele Jul/Aug) |
 | Lohr a. Main: Spessartmuseum („Schneewittchen“, Bahn) | spessartmuseum.de | museum-kultur, ohne-auto | ✓ aufgenommen 2026-07-19 (nur Barzahlung!) |
-| Wertheim: Altstadt & Burg | tourismus-wertheim.de | aussicht, museum-kultur | offen |
-| Kloster Bronnbach (Taubertal) | kloster-bronnbach.de | museum-kultur, garten-park | offen |
+| Wertheim: Altstadt & Burg | tourismus-wertheim.de | aussicht, museum-kultur | ✓ aufgenommen 2026-07-19 (Burg 2 €) |
+| Kloster Bronnbach (Taubertal) | kloster-bronnbach.de | museum-kultur, garten-park | ✓ aufgenommen 2026-07-19 (Preise nur als Bild → unknown; eigener Bahnhalt) |
 | Tauberbischofsheim: Altstadt (Bahn) | tauberbischofsheim.de | museum-kultur, ohne-auto | offen |
 | Schloss & Garten Weikersheim (Bahn) | schloss-weikersheim.de | museum-kultur, garten-park, ohne-auto | ✓ aufgenommen 2026-07-19 (Schloss nur mit Führung, nicht barrierefrei) |
 | Kurpark Bad Mergentheim (Bahn) | bad-mergentheim.de | garten-park, ohne-auto | ✓ aufgenommen 2026-07-19 (kostenfrei; Wandelhalle im Umbau) |
@@ -44,14 +44,14 @@ Empfohlene Losgröße: 4–8 Kandidaten pro Redaktionslauf.
 | Dettelbach: Altstadt & Wallfahrt | dettelbach.de | museum-kultur | offen |
 | Schwanberg (Rödelsee): Aussicht & Park | schwanberg.de | aussicht, garten-park | offen |
 | Sommerach: Altort & Weininsel | sommerach.de | aussicht | offen |
-| Abteikirche Münsterschwarzach | abtei-muensterschwarzach.de | museum-kultur, kostenlos | offen |
+| Abteikirche Münsterschwarzach | abtei-muensterschwarzach.de | museum-kultur, kostenlos | ✓ aufgenommen 2026-07-19 (Kirche täglich 5–20 Uhr) |
 | Volkach: Maria im Weingarten (Riemenschneider) | volkach.de | museum-kultur, aussicht | offen |
 | Ellertshäuser See (Stausee) | landkreis-schweinfurt.de | freibad-see | offen |
-| Steigerwald-Zentrum Handthal (kostenlos) | steigerwald-zentrum.de | wald-natur, wissenschaft | offen |
-| Kunsthalle Schweinfurt | kunsthalle-schweinfurt.de | museum-kultur, regenfest | offen |
+| Steigerwald-Zentrum Handthal (kostenlos) | aelf-sw.bayern.de | wald-natur, wissenschaft | ✓ aufgenommen 2026-07-19 (Eintritt frei amtlich; Sommerzeiten prüfen) |
+| Kunsthalle Schweinfurt | kunsthalle-schweinfurt.de | museum-kultur, regenfest | ✓ aufgenommen 2026-07-19 (bis 16 J. frei, 1. Do frei) |
 | Iphofen: Altstadt & Stadtmauerrundgang (Bahn) | iphofen.de | aussicht, ohne-auto | offen |
 | Prichsenstadt: Altort | prichsenstadt.de | museum-kultur | offen |
-| Bad Kissingen: Kurgarten, Wandelhalle, Rosengarten (Bahn) | badkissingen.de | garten-park, ohne-auto | offen |
+| Bad Kissingen: Kurgarten, Wandelhalle, Rosengarten (Bahn) | bad-kissingen.de | garten-park | ✓ aufgenommen 2026-07-19 (Wandelhalle täglich 7–18; Kostenfreiheit nicht zitierfähig → unknown) |
 | Schloss Aschach: Museen des Bezirks | museen-schloss-aschach.de | museum-kultur | offen |
 
 ## Fernziel (über 50 km)
@@ -65,7 +65,7 @@ Empfohlene Losgröße: 4–8 Kandidaten pro Redaktionslauf.
 | Nürnberg: Kindermuseum (nur So/Sa!) | kindermuseum-nuernberg.de | wissenschaft, regenfest | ✓ aufgenommen 2026-07-19 (Sommerpause Jul–Sep!) |
 | Nürnberg: Erfahrungsfeld zur Entfaltung der Sinne (saisonal) | nuernberg.de | wissenschaft | offen |
 | Nürnberg: Germanisches Nationalmuseum | gnm.de | museum-kultur, regenfest | ✓ aufgenommen 2026-07-19 |
-| Miltenberg: Altstadt (Westfrankenbahn) | miltenberg.info | museum-kultur, ohne-auto | offen |
+| Miltenberg: Altstadt (Westfrankenbahn) | miltenberg.info | museum-kultur, ohne-auto | ✓ aufgenommen 2026-07-19 (Museen: bis 14 J. frei, keine Kartenzahlung) |
 | Aschaffenburg: Schloss Johannisburg & Pompejanum | schloesser.bayern.de | museum-kultur | offen |
 | Aschaffenburg: Park Schönbusch | schloesser.bayern.de | garten-park | offen |
 | Wasserschloss Mespelbrunn (nur Auto) | schloss-mespelbrunn.de | museum-kultur | offen |
