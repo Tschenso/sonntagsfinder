@@ -161,23 +161,49 @@ Das Vier-Augen-Prinzip läuft über Git, nicht über Anwendungscode:
    Eignungsaussagen über einzelne Personen. Unsicherheit wird nie als „Passt“
    dargestellt – im Zweifel `derived`/`unknown` lassen und die Ampel entscheiden lassen.
 
-## Pflege-Rhythmus (monatlich, ca. 30–60 Minuten)
+## Pflege-Checkliste (monatlich, ca. 30–60 Minuten)
 
-1. **Links & Fälligkeiten prüfen:**
+Immer in dieser Reihenfolge – ein Durchlauf pro Monat hält den Katalog aktuell.
+
+1. **Repo öffnen und Links prüfen.** Im Projektordner starten:
    ```powershell
+   cd <Pfad>\Sonntagsfinder-Public
    powershell -ExecutionPolicy Bypass -File .\check-links.ps1
    ```
-   Der Report zeigt nicht erreichbare URLs (bitte im Browser gegenprüfen – manche
-   Seiten blocken nur automatisierte Abrufe) und alle Einträge, deren
+   Der Report listet (a) nicht erreichbare URLs und (b) alle Einträge, deren
    `next_review_on` erreicht ist oder in den nächsten 30 Tagen fällig wird.
-2. **Fällige Reviews abarbeiten:** Quellseite aufrufen, Fakten abgleichen,
-   `source_checked_on` aktualisieren und ein neues `next_review_on` setzen
-   (Faustregel: Öffnung/Preis 90 Tage, saisonal 30 Tage, stabil 180 Tage).
-   Tote Links durch die aktuelle offizielle Seite ersetzen.
-3. **Offline-Ausgabe neu bauen:** `make-offline.ps1` ausführen.
-4. **Committen & pushen** – ein Commit pro Pflegelauf mit Datum im Text.
-   Danach einmal die Live-Seite hart neu laden (Strg+F5) und die
-   Katalogversion im Fußbereich kontrollieren.
+2. **Auffällige Links gegenprüfen.** Nicht jeder Treffer ist ein echter Fehler –
+   manche Seiten blocken automatisierte Abrufe (HTTP 403) oder antworten kurz mit
+   Timeout. Jede gemeldete URL einmal im Browser öffnen, bevor sie ersetzt wird.
+3. **Fällige Reviews abarbeiten.** Offizielle Quelle aufrufen, Öffnung/Preis/Zugang
+   abgleichen; dann im Eintrag `source_checked_on` auf heute setzen und ein neues
+   `next_review_on` nach der Kurzregel unten. Tote Links durch die aktuelle offizielle
+   Seite ersetzen; im Zweifel `derived`/`unknown` lassen, statt „Passt“ zu behaupten.
+4. **Katalogversion hochzählen.** `catalog_version` oben in `catalog.json` auf das
+   heutige Datum setzen (Schema `JJJJ-MM-TT.n`, `n` = Lauf des Tages). `catalog.json`
+   als **UTF-8 ohne BOM** speichern – sonst kann der Browser das JSON nicht laden.
+5. **Offline-Ausgabe neu bauen.**
+   ```powershell
+   powershell -ExecutionPolicy Bypass -File .\make-offline.ps1
+   ```
+6. **Committen & pushen** – ein Commit pro Pflegelauf mit Datum im Text.
+7. **Live gegenprüfen.** Nach ein bis zwei Minuten (GitHub-Pages-Deploy) die Seite mit
+   Cache-Buster aufrufen – z. B. `…/sonntagsfinder/?cb=pflege` oder
+   `…/sonntagsfinder/catalog.json?cb=pflege` – und die Katalogversion im Fußbereich
+   kontrollieren. (Das GitHub-Pages-CDN cacht ein paar Minuten; ein einfaches
+   Neuladen zeigt sonst noch den alten Stand.)
+
+### Kurzregel für `next_review_on`
+
+| Art des Eintrags | Intervall |
+|---|---|
+| Öffnungszeiten oder Preise (Museen, Bäder, Parks mit Eintritt) | **90 Tage** |
+| Saisonal (nur zeitweise offen, wetter-/jahreszeitabhängig) | **30 Tage** |
+| Stabile Außenwege (frei zugänglich, ganzjährig) | **180 Tage** |
+| Interne Vorlagen (ortsunabhängig, `status: internal`) | **365 Tage** |
+
+Ist `next_review_on` überschritten, zeigt die Karte automatisch „⚠ Prüfung
+überfällig“ – veraltete Einträge werden sichtbar, nicht versteckt.
 
 ## Herkunft & Attribution
 
