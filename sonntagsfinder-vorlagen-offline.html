@@ -119,7 +119,7 @@
 <body>
 <script>window.EMBEDDED_CATALOG = {
   "schema_version": 2,
-  "catalog_version": "2026-07-20.3",
+  "catalog_version": "2026-07-27.1",
   "note": "Öffentlicher Katalog des Sonntagsfinders Würzburg. Basis: redaktioneller Basiskatalog v1 (2026-07-15.1, 30 Einträge) plus 9 neue Einträge vom 2026-07-17 (6 regionale, 3 Fernziele mit booking_url). Änderungen bitte per Pull-Request, siehe README.",
   "activities": [
     {
@@ -247,20 +247,20 @@
       "additional_costs": "",
       "cost_valid_until": null,
       "sunday_status": "seasonal",
-      "sunday_text": "Sonntag vormittags; geöffnete Sammlung wechselt und muss geprüft werden.",
+      "sunday_text": "So 10–13:30 Uhr; Antikensammlung und Gemäldegalerie öffnen im wöchentlichen Wechsel – Kalender prüfen. Montags geschlossen, letzter Einlass 30 Min. vor Schluss.",
       "environment": "indoor",
       "duration_min": 60,
       "duration_max": 120,
       "booking_required": null,
       "step_free": true,
       "accessibility_text": "Fahrstuhlzugang über den ausgewiesenen Hofzugang beschrieben.",
-      "preparation_text": "Geöffnete Sammlung und Zugang am Besuchstag bestätigen.",
+      "preparation_text": "Geöffnete Sammlung im Online-Kalender bestätigen; letzter Einlass 30 Minuten vor Schließung.",
       "plan_b": "Hofgarten der Residenz oder MiK.",
-      "pre_departure_checks": ["Geöffnete Sammlung prüfen", "Fahrstuhlzugang bestätigen", "Ersatzprogramm bereithalten"],
-      "source_checked_on": "2026-07-14",
-      "next_review_on": "2026-08-13",
+      "pre_departure_checks": ["Geöffnete Sammlung im Kalender prüfen", "Fahrstuhlzugang bestätigen", "Ersatzprogramm bereithalten"],
+      "source_checked_on": "2026-07-27",
+      "next_review_on": "2026-10-25",
       "booking_url": null,
-      "sources": [{"url": "https://www.phil.uni-wuerzburg.de/index.php?id=201301", "publisher": "Universität Würzburg", "status": "official", "checked_on": "2026-07-14"}]
+      "sources": [{"url": "https://www.martinvonwagner-museum.com/service", "publisher": "Martin von Wagner Museum", "status": "official", "checked_on": "2026-07-27"}]
     },
     {
       "seed_key": "mineralogisches-museum",
@@ -294,7 +294,7 @@
       "seed_key": "gramschatzer-pfade",
       "tags": ["wald-natur"],
       "title": "Sinneswandeln und Zahlenwald",
-      "summary": "Gebührenfreie Außenpfade für Sinne, Natur und Mathematik; Gebäude nicht einplanen.",
+      "summary": "Gebührenfreie Außenpfade für Sinne, Natur und Mathematik; das Walderlebniszentrum ist sonntags nachmittags offen.",
       "activity_type": "Wald und Lehrpfade",
       "locality": "Rimpar, Gramschatzer Wald",
       "distance_from_wuerzburg_km": 15.0,
@@ -302,21 +302,21 @@
       "cost_per_person_cents": 0,
       "additional_costs": "",
       "cost_valid_until": null,
-      "sunday_status": "derived",
-      "sunday_text": "Außenpfade nutzbar; offizielle Gebäudezeiten widersprechen sich.",
+      "sunday_status": "confirmed",
+      "sunday_text": "Außenpfade jederzeit frei zugänglich; Walderlebniszentrum sonntags 13–16:30 Uhr kostenfrei.",
       "environment": "outdoor",
       "duration_min": 90,
       "duration_max": 180,
-      "booking_required": true,
+      "booking_required": false,
       "step_free": true,
-      "accessibility_text": "Sinnespfad rollstuhl- und rollatorgerecht; anderer Pfad nur kinderwagentauglich.",
-      "preparation_text": "Außenpfade unabhängig vom Gebäude planen; Waldwarnungen prüfen.",
+      "accessibility_text": "Sinneswandelweg (1,1 km) rollstuhl- und rollatorgerecht, mit Leitsystem für Blinde; anderer Pfad nur kinderwagentauglich.",
+      "preparation_text": "Außenpfade sind unabhängig vom Gebäude nutzbar; WEZ-Zeiten (So 13–16:30 Uhr) und Waldwarnungen prüfen.",
       "plan_b": "Eigenes Waldquiz an einem überdachten öffentlichen Ort.",
-      "pre_departure_checks": ["Gebäude nicht voraussetzen", "Gruppe gegebenenfalls voranmelden", "Waldwarnungen prüfen"],
-      "source_checked_on": "2026-07-14",
-      "next_review_on": "2026-08-13",
+      "pre_departure_checks": ["WEZ-Zeiten beachten (So 13–16:30 Uhr)", "Gruppe gegebenenfalls voranmelden", "Waldwarnungen prüfen"],
+      "source_checked_on": "2026-07-27",
+      "next_review_on": "2027-01-23",
       "booking_url": null,
-      "sources": [{"url": "https://www.aelf-kw.bayern.de/forstwirtschaft/wald/277929/index.php", "publisher": "AELF Kitzingen-Würzburg", "status": "conflict", "checked_on": "2026-07-14"}]
+      "sources": [{"url": "https://www.aelf-kw.bayern.de/forstwirtschaft/wald/277929/index.php", "publisher": "AELF Kitzingen-Würzburg", "status": "official", "checked_on": "2026-07-27"}]
     },
     {
       "seed_key": "planetenweg",
@@ -727,10 +727,10 @@
       "distance_from_wuerzburg_km": 2.0,
       "cost_status": "known",
       "cost_per_person_cents": 300,
-      "additional_costs": "Alters- und Gruppentarife getrennt prüfen.",
-      "cost_valid_until": "2026-10-13",
+      "additional_costs": "Ermäßigt 2 €/1 €, Kinder bis 10 Jahre frei; Gruppentarife getrennt prüfen.",
+      "cost_valid_until": "2026-10-25",
       "sunday_status": "seasonal",
-      "sunday_text": "Sonntags tagsüber; in Schulferien sowie an staatlichen und jüdischen Feiertagen geschlossen.",
+      "sunday_text": "So 11–16 Uhr; in Schulferien sowie an jüdischen und nicht jüdischen Feiertagen geschlossen – Jahreskalender prüfen.",
       "environment": "indoor",
       "duration_min": 90,
       "duration_max": 120,
@@ -740,11 +740,11 @@
       "preparation_text": "Jahreskalender und aktuelle Haus- und Sicherheitsregeln kurz vor Besuch prüfen.",
       "plan_b": "Siebold-Museum oder MiK.",
       "pre_departure_checks": ["Jahreskalender innerhalb von 48 Stunden prüfen", "Hausregeln prüfen", "Tarif bestätigen"],
-      "source_checked_on": "2026-07-15",
-      "next_review_on": "2026-08-14",
+      "source_checked_on": "2026-07-27",
+      "next_review_on": "2026-10-25",
       "booking_url": null,
       "sources": [
-        {"url": "https://museumshalomeuropa.de/", "publisher": "Museum Shalom Europa", "status": "official", "checked_on": "2026-07-15"},
+        {"url": "https://museumshalomeuropa.de/", "publisher": "Museum Shalom Europa", "status": "official", "checked_on": "2026-07-27"},
         {"url": "https://museumshalomeuropa.de/wp-content/uploads/2026/05/Kalender-2026-Deutsch-2-1.pdf", "publisher": "Museum Shalom Europa", "status": "official", "checked_on": "2026-07-19"}
       ]
     },
@@ -932,7 +932,7 @@
       "seed_key": "bio-rundweg-gadheim",
       "tags": ["wald-natur"],
       "title": "Bio-Rundweg Gadheim",
-      "summary": "Kurzer Lehrpfad zu Landwirtschaft, regionalen Produkten und Wildlebensräumen.",
+      "summary": "Rund 2,5 km Lehrpfad an Bio-Feldern, regionalen Produkten und Wildlebensräumen.",
       "activity_type": "Natur- und Landwirtschaftslehrpfad",
       "locality": "Gadheim",
       "distance_from_wuerzburg_km": 10.0,
@@ -941,20 +941,20 @@
       "additional_costs": "",
       "cost_valid_until": null,
       "sunday_status": "seasonal",
-      "sunday_text": "Weg ganzjährig; Informationsstationen nur saisonal verfügbar.",
+      "sunday_text": "Weg ganzjährig frei; Informationsstationen nur saisonal verfügbar.",
       "environment": "outdoor",
       "duration_min": 60,
       "duration_max": 90,
       "booking_required": false,
       "step_free": false,
-      "accessibility_text": "Gesamtstrecke laut Quelle weniger für Kinderwagen oder Rollstuhl geeignet.",
-      "preparation_text": "Tafeln, landwirtschaftliche Arbeiten, Hitze und Wegzustand prüfen.",
+      "accessibility_text": "Rund 2,5 km; laut Quelle weniger für Kinderwagen oder Rollstuhl geeignet.",
+      "preparation_text": "Rund 2,5 km an bio-landwirtschaftlichen Feldern und Wildlebensräumen; Tafeln, laufende Feldarbeiten, Hitze und Wegzustand prüfen.",
       "plan_b": "Hofgarten oder Jüdisches Kulturmuseum Veitshöchheim.",
       "pre_departure_checks": ["Saisonale Stationen prüfen", "Landwirtschaftliche Arbeiten beachten", "Hitze und Gewitter prüfen"],
-      "source_checked_on": "2026-07-15",
-      "next_review_on": "2026-08-15",
+      "source_checked_on": "2026-07-27",
+      "next_review_on": "2027-01-23",
       "booking_url": null,
-      "sources": [{"url": "https://www.landkreis-wuerzburg.de/Bildung-Freizeit-Kultur/Urlaub-dahemm/F%C3%BCr-Wanderfreudige/WanderErlebnis-familienfreundlich/Gadheim-Rundweg-Bio-Regionale-Landwirtschaft-und-Wildlebensr%C3%A4ume.php", "publisher": "Landkreis Würzburg", "status": "derived", "checked_on": "2026-07-17"}]
+      "sources": [{"url": "https://www.landkreis-wuerzburg.de/Bildung-Freizeit-Kultur/Urlaub-dahemm/F%C3%BCr-Wanderfreudige/WanderErlebnis-familienfreundlich/Gadheim-Rundweg-Bio-Regionale-Landwirtschaft-und-Wildlebensr%C3%A4ume.php", "publisher": "Landkreis Würzburg", "status": "derived", "checked_on": "2026-07-27"}]
     },
     {
       "seed_key": "willis-schnecken-weg",
@@ -3466,7 +3466,7 @@
 
 <main class="wrap">
   <nav class="viewnav" aria-label="Bereich wählen">
-    <a class="viewnav-go" href="sonntagsfinder-offline.html"><span class="arr" aria-hidden="true">←</span> 🧭 Alle Ausflugsziele</a>
+    <a class="viewnav-go" href="sonntagsfinder-offline.html"><span class="arr" aria-hidden="true">←</span> 📚 Alle Ausflugsziele</a>
     <span class="viewnav-here" aria-current="page">💡 Vorlagen ohne Ziel</span>
   </nav>
   <div class="explain">
