@@ -71,6 +71,20 @@
   .hero p.dek { margin:0; max-width: 62ch; font-size:1.05rem; color:var(--ink-2); }
 
   main { padding-block: 1.6rem 4rem; }
+
+  /* Bereichs-Umschalter: Vorlagen <-> Ausflüge deutlich sichtbar */
+  .viewnav { display:flex; flex-wrap:wrap; gap:.55rem; align-items:center; margin-bottom:1.3rem; }
+  .viewnav-here { display:inline-flex; align-items:center; gap:.4rem; font-size:.92rem; font-weight:700; padding:.55rem .95rem; border-radius:999px; background:var(--surface-2); border:1px solid var(--line-2); color:var(--ink-2); }
+  .viewnav-go { display:inline-flex; align-items:center; gap:.5rem; font-size:.95rem; font-weight:700; text-decoration:none; padding:.58rem 1.1rem; border-radius:999px; background:var(--accent); border:1px solid var(--accent); color:#fff; box-shadow:var(--shadow); }
+  .viewnav-go .arr { transition: transform .15s ease; }
+  .viewnav-go:hover { background:var(--accent-2); }
+  .viewnav-go:hover .arr { transform: translateX(-3px); }
+  :root[data-theme="dark"] .viewnav-go { color:#08110c; }
+  @media (prefers-color-scheme: dark){ .viewnav-go { color:#08110c; } }
+  :root[data-theme="light"] .viewnav-go { color:#fff; }
+  .viewnav-note { font-size:.82rem; color:var(--muted); flex:1 1 220px; min-width:0; }
+  @media (max-width:560px){ .viewnav-note { flex-basis:100%; } }
+
   .explain { background:var(--surface); border:1px solid var(--line); border-left:5px solid var(--accent); border-radius:var(--r); padding:1rem 1.15rem; margin-bottom:1.4rem; display:grid; gap:.6rem; font-size:.9rem; color:var(--ink-2); }
   .explain h2 { margin:0; font-size:1rem; color:var(--ink); }
   .explain .fine { font-size:.78rem; color:var(--muted); margin:0; }
@@ -102,7 +116,7 @@
   footer.site h2 { margin:0; font-size:.95rem; }
 
   @media print {
-    .theme-btn, .nav-link { display:none !important; }
+    .theme-btn, .nav-link, .viewnav { display:none !important; }
     .card { break-inside: avoid; box-shadow:none; }
   }
 </style>
@@ -116,7 +130,6 @@
         <div class="sun" aria-hidden="true"></div>
         <div><b>Sonntagsfinder Würzburg</b><span>Kuratierte Ausflüge · offene Ressource</span></div>
       </a>
-      <a class="nav-link" href="./">← Alle Ausflüge</a>
       <button class="theme-btn" id="theme" aria-label="Hell/Dunkel umschalten" title="Hell/Dunkel">◐</button>
     </div>
     <div class="hero">
@@ -128,6 +141,10 @@
 </header>
 
 <main class="wrap">
+  <nav class="viewnav" aria-label="Bereich wählen">
+    <a class="viewnav-go" href="./"><span class="arr" aria-hidden="true">←</span> 🧭 Alle Ausflugsziele</a>
+    <span class="viewnav-here" aria-current="page">💡 Vorlagen ohne Ziel</span>
+  </nav>
   <div class="explain">
     <h2>So sind die Vorlagen gedacht</h2>
     <p style="margin:0">Jede Vorlage ist eine Methodenidee, kein Ort: Ihr wählt selbst, wo sie stattfindet, und prüft den Ort separat (Raumfreigabe, Wetter, Aufsicht). Die Vorlagen kommen ohne Personenbewertung und ohne Ranglisten aus; wo Fotos, Aufnahmen oder fremde Menschen ins Spiel kommen, steht die Einwilligung in der Checkliste.</p>

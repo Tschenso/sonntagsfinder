@@ -68,6 +68,19 @@
   .theme-btn { appearance:none; border:1px solid var(--line-2); background:var(--surface); color:var(--ink); width:38px; height:38px; border-radius:10px; cursor:pointer; font-size:1.05rem; }
   .nav-link { font-size:.83rem; font-weight:650; text-decoration:none; border:1px solid var(--line-2); background:var(--surface); color:var(--ink-2); padding:.45rem .8rem; border-radius:10px; white-space:nowrap; }
   .nav-link:hover { background:var(--accent-soft); border-color:var(--accent); color:var(--accent-2); }
+
+  /* Bereichs-Umschalter: Ausflüge <-> Vorlagen deutlich sichtbar */
+  .viewnav { display:flex; flex-wrap:wrap; gap:.55rem; align-items:center; margin-bottom:1.3rem; }
+  .viewnav-here { display:inline-flex; align-items:center; gap:.4rem; font-size:.92rem; font-weight:700; padding:.55rem .95rem; border-radius:999px; background:var(--surface-2); border:1px solid var(--line-2); color:var(--ink-2); }
+  .viewnav-go { display:inline-flex; align-items:center; gap:.5rem; font-size:.95rem; font-weight:700; text-decoration:none; padding:.58rem 1.1rem; border-radius:999px; background:var(--accent); border:1px solid var(--accent); color:#fff; box-shadow:var(--shadow); }
+  .viewnav-go .arr { transition: transform .15s ease; }
+  .viewnav-go:hover { background:var(--accent-2); }
+  .viewnav-go:hover .arr { transform: translateX(3px); }
+  :root[data-theme="dark"] .viewnav-go { color:#08110c; }
+  @media (prefers-color-scheme: dark){ .viewnav-go { color:#08110c; } }
+  :root[data-theme="light"] .viewnav-go { color:#fff; }
+  .viewnav-note { font-size:.82rem; color:var(--muted); flex:1 1 220px; min-width:0; }
+  @media (max-width:560px){ .viewnav-note { flex-basis:100%; } }
   .hero { padding: 1.4rem 0 2rem; display:grid; gap:1rem; }
   .hero h1 { font-family: var(--serif); font-weight:600; font-size: clamp(1.9rem, 1.2rem + 3vw, 3.1rem); margin:0; letter-spacing:-.015em; }
   .hero p.dek { margin:0; max-width: 62ch; font-size:1.08rem; color:var(--ink-2); }
@@ -186,7 +199,7 @@
   .disclaimer { background:var(--check-soft); border:1px solid color-mix(in srgb, var(--check) 25%, transparent); border-radius:10px; padding:.7rem .9rem; font-size:.82rem; color:var(--ink-2); }
 
   @media print {
-    .filters, .sortbar, .theme-btn, .nav-link, .presets, .explain, .skip, .tally { display:none !important; }
+    .filters, .sortbar, .theme-btn, .nav-link, .viewnav, .presets, .explain, .skip, .tally { display:none !important; }
     header.site { background:none; border:0; }
     .hero { padding-bottom:.5rem; }
     .layout { grid-template-columns:1fr; }
@@ -209,7 +222,6 @@
         <div class="sun" aria-hidden="true"></div>
         <div><b>Sonntagsfinder Würzburg</b><span>Kuratierte Ausflüge · offene Ressource</span></div>
       </div>
-      <a class="nav-link" href="vorlagen.html">💡 Vorlagen ohne Ziel</a>
       <button class="theme-btn" id="theme" aria-label="Hell/Dunkel umschalten" title="Hell/Dunkel">◐</button>
     </div>
     <div class="hero">
@@ -227,6 +239,11 @@
 </header>
 
 <main class="wrap">
+  <nav class="viewnav" aria-label="Bereich wählen">
+    <span class="viewnav-here" aria-current="page">🧭 Ausflugsziele</span>
+    <a class="viewnav-go" href="vorlagen.html">💡 Vorlagen ohne Ziel <span class="arr" aria-hidden="true">→</span></a>
+    <span class="viewnav-note">Ideen für drinnen &amp; draußen, wenn kein Ausflug möglich ist.</span>
+  </nav>
   <div class="loaderr" id="loaderr" hidden>
     <b>Katalog konnte nicht geladen werden.</b><br>
     Diese Seite lädt ihre Daten aus <code>catalog.json</code> und braucht dafür einen Webserver.
