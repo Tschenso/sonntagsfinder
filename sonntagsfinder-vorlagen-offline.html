@@ -119,7 +119,7 @@
 <body>
 <script>window.EMBEDDED_CATALOG = {
   "schema_version": 2,
-  "catalog_version": "2026-07-27.1",
+  "catalog_version": "2026-07-27.2",
   "note": "Öffentlicher Katalog des Sonntagsfinders Würzburg. Basis: redaktioneller Basiskatalog v1 (2026-07-15.1, 30 Einträge) plus 9 neue Einträge vom 2026-07-17 (6 regionale, 3 Fernziele mit booking_url). Änderungen bitte per Pull-Request, siehe README.",
   "activities": [
     {
@@ -322,7 +322,7 @@
       "seed_key": "planetenweg",
       "tags": ["wissenschaft","ohne-auto"],
       "title": "Planetenweg Würzburg",
-      "summary": "Etwa zwei Kilometer langer Themenweg mit ertastbaren Planetenmodellen.",
+      "summary": "Gut zwei Kilometer langer Themenweg mit elf Muschelkalkstelen von der Sonne bis Pluto (Maßstab 1:2 Milliarden).",
       "activity_type": "Astronomie und Spaziergang",
       "locality": "Würzburg, Frauenland",
       "distance_from_wuerzburg_km": 4.0,
@@ -330,21 +330,24 @@
       "cost_per_person_cents": 0,
       "additional_costs": "",
       "cost_valid_until": null,
-      "sunday_status": "derived",
-      "sunday_text": "Frei zugänglicher Weg; Quelle ist überfällig und vor Nutzung neu zu prüfen.",
+      "sunday_status": "confirmed",
+      "sunday_text": "Frei zugänglicher Außenweg, jederzeit begehbar; Start an der Sonnenstele am Spielplatz Oberer Neubergweg.",
       "environment": "outdoor",
       "duration_min": 60,
       "duration_max": 120,
       "booking_required": false,
-      "step_free": true,
-      "accessibility_text": "Ältere Quelle beschreibt den Weg als stufenfrei und ertastbar.",
-      "preparation_text": "Wegzustand und Beschilderung vor Ort oder über aktuelle Quelle prüfen.",
+      "step_free": null,
+      "accessibility_text": "Außenweg durch Grünanlagen und am Weinberg Abtsleite vorbei; Steigungen möglich, Barrierefreiheit nicht amtlich belegt. Bushalte St.-Alfons-Kirche, Hans-Löffler-Straße, Äußeres Hubland.",
+      "preparation_text": "Vom Verein Volkssternwarte Würzburg 2011 angelegt: elf Stelen von der Sonnenstele (Oberer Neubergweg) bis zur Pluto-Stele beim Restaurant Hubland. Eigenes Planetenquiz vorbereiten.",
       "plan_b": "Mineralogisches Museum.",
-      "pre_departure_checks": ["Aktuellen Wegzustand prüfen", "Quiz vorbereiten", "Sonnen- und Wetterschutz einplanen"],
-      "source_checked_on": "2021-04-01",
-      "next_review_on": "2021-06-30",
+      "pre_departure_checks": ["Startpunkt Oberer Neubergweg ansteuern", "Planetenquiz vorbereiten", "Sonnen- und Wetterschutz einplanen"],
+      "source_checked_on": "2026-07-27",
+      "next_review_on": "2027-01-23",
       "booking_url": null,
-      "sources": [{"url": "https://www.wuerzburg.de/media/www.wuerzburg.de/org/med_12816/571336_outdoor-tripp_nr_7_1.pdf", "publisher": "Stadt Würzburg", "status": "stale", "checked_on": "2021-04-01"}]
+      "sources": [
+        {"url": "http://www.planetenweg-wuerzburg.de/", "publisher": "Volkssternwarte Würzburg e.V.", "status": "official", "checked_on": "2026-07-27"},
+        {"url": "https://wuerzburgwiki.de/wiki/Planetenweg", "publisher": "WürzburgWiki", "status": "derived", "checked_on": "2026-07-27"}
+      ]
     },
     {
       "seed_key": "ringpark-lehrpfad",
