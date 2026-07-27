@@ -158,6 +158,11 @@
   .presets { display:flex; flex-wrap:wrap; gap:.45rem; }
   .preset { appearance:none; border:1px solid var(--line-2); background:var(--surface); color:var(--ink-2); font:inherit; font-size:.8rem; font-weight:650; padding:.35rem .7rem; border-radius:999px; cursor:pointer; }
   .preset:hover { background:var(--accent-soft); border-color:var(--accent); color:var(--accent-2); }
+  .preset[aria-pressed="true"] { background:var(--accent); border-color:var(--accent); color:#fff; }
+  .preset[aria-pressed="true"]::before { content:"✓ "; font-weight:800; }
+  @media (prefers-color-scheme: dark){ .preset[aria-pressed="true"] { color:#08110c; } }
+  :root[data-theme="dark"] .preset[aria-pressed="true"] { color:#08110c; }
+  :root[data-theme="light"] .preset[aria-pressed="true"] { color:#fff; }
 
   .theme-chips { display:flex; flex-wrap:wrap; gap:.4rem; }
   .tchip { appearance:none; border:1px solid var(--line-2); background:var(--surface); color:var(--ink-2); font:inherit; font-size:.78rem; font-weight:650; padding:.3rem .65rem; border-radius:999px; cursor:pointer; }
@@ -3522,7 +3527,7 @@
   "note": "Kuratierte, zeitlich begrenzte Hinweise (Sonderöffnungen, Feste, Sonderausstellungen). Jeder Eintrag braucht valid_until (ISO-Datum) – abgelaufene Einträge blendet die Website automatisch aus. Felder: title, locality, date_text, valid_until, url, note. Beispiel siehe README.",
   "events": []
 }
-; window.EMBEDDED_BUILD = "2026-07-20";</script>
+; window.EMBEDDED_BUILD = "2026-07-27";</script>
 
 <a class="skip" href="#results">Direkt zu den Ergebnissen</a>
 
@@ -3561,12 +3566,12 @@
   <div class="layout" id="layout" hidden>
     <form class="filters" id="filters" role="search" aria-label="Ausflüge filtern">
       <h2>Filter</h2>
-      <div class="presets" role="group" aria-label="Schnellfilter">
-        <button type="button" class="preset" data-p="regen">🌧 Regentag</button>
-        <button type="button" class="preset" data-p="frei">🆓 Kostenlos draußen</button>
-        <button type="button" class="preset" data-p="barriere">♿ Barrierearm</button>
-        <button type="button" class="preset" data-p="stadt">🏙 In der Stadt</button>
-        <button type="button" class="preset" data-p="fern">🚌 Fernziel-Tag</button>
+      <div class="presets" role="group" aria-label="Schnellfilter (zum Aufheben erneut tippen)">
+        <button type="button" class="preset" data-p="regen" aria-pressed="false">🌧 Regentag</button>
+        <button type="button" class="preset" data-p="frei" aria-pressed="false">🆓 Kostenlos draußen</button>
+        <button type="button" class="preset" data-p="barriere" aria-pressed="false">♿ Barrierearm</button>
+        <button type="button" class="preset" data-p="stadt" aria-pressed="false">🏙 In der Stadt</button>
+        <button type="button" class="preset" data-p="fern" aria-pressed="false">🚌 Fernziel-Tag</button>
       </div>
       <div class="field">
         <label for="q">Suche</label>
@@ -3880,9 +3885,34 @@ function readFilters(){
   };
 }
 
+/* ---------- Schnellfilter (Presets) als Umschalter ----------
+   Jedes Preset ist eine Kombination aus Feldwerten. Es gilt als aktiv, wenn
+   alle seine Felder gerade genau diese Werte haben – dann wird der Knopf
+   markiert. Ein Klick auf ein aktives Preset setzt seine Felder wieder auf
+   Standard; ein Klick auf ein inaktives setzt sie. So passt sich der Filter
+   direkt an und die Markierung folgt auch manuellen Änderungen. */
+const PRESETS = {
+  regen:    { env: "indoor" },
+  frei:     { free: true, env: "outdoor" },
+  barriere: { acc: true },
+  stadt:    { tier: "stadt" },
+  fern:     { tier: "fern" }
+};
+const FIELD_DEFAULTS = { env:"", tier:"", dur:"", free:false, acc:false, sun:false };
+function fieldValue(id){ const el = $(id); return el.type === "checkbox" ? el.checked : el.value; }
+function setField(id, val){ const el = $(id); if (el.type === "checkbox") el.checked = !!val; else el.value = val; }
+function presetActive(def){ return Object.keys(def).every(id => fieldValue(id) === def[id]); }
+function syncPresets(){
+  document.querySelectorAll(".preset").forEach(b => {
+    const def = PRESETS[b.dataset.p];
+    b.setAttribute("aria-pressed", def && presetActive(def) ? "true" : "false");
+  });
+}
+
 function apply(){
   const f = readFilters();
   $("radOut").textContent = f.maxRad + " km";
+  syncPresets();
 
   let rows = DATA.map(it => ({it, ev: evaluate(it, f)}));
   rows = rows.filter(({it}) => {
@@ -4005,12 +4035,10 @@ function readState(str){
       apply();
     });
     document.querySelectorAll(".preset").forEach(b => b.addEventListener("click", () => {
-      const p = b.dataset.p;
-      if (p === "regen"){ $("env").value = "indoor"; }
-      if (p === "frei"){ $("free").checked = true; $("env").value = "outdoor"; }
-      if (p === "barriere"){ $("acc").checked = true; }
-      if (p === "stadt"){ $("tier").value = "stadt"; }
-      if (p === "fern"){ $("tier").value = "fern"; }
+      const def = PRESETS[b.dataset.p];
+      if (!def) return;
+      const turnOff = presetActive(def);
+      Object.keys(def).forEach(id => setField(id, turnOff ? FIELD_DEFAULTS[id] : def[id]));
       apply();
     }));
     document.querySelectorAll(".tchip").forEach(b => b.addEventListener("click", () => {
