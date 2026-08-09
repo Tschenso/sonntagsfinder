@@ -88,6 +88,13 @@
   .jump a { font-size:.8rem; font-weight:650; text-decoration:none; border:1px solid var(--line-2); background:var(--surface); color:var(--ink-2); padding:.35rem .7rem; border-radius:999px; }
   .jump a:hover { background:var(--accent-soft); border-color:var(--accent); color:var(--accent-2); }
 
+  /* Fingerfreundliche Bedienelemente auf Touchgeraeten */
+  @media (pointer: coarse), (max-width: 880px) {
+    .jump a { min-height:40px; display:inline-flex; align-items:center; }
+    .viewnav-here, .viewnav-go { min-height:44px; }
+    .theme-btn { min-height:44px; min-width:44px; }
+  }
+
   .wgroup { margin-bottom:2rem; scroll-margin-top:1rem; }
   .wgroup > h2 { margin:0 0 .3rem; font-family:var(--serif); font-weight:600; font-size:1.35rem; display:flex; align-items:center; gap:.5rem; }
   .wgroup > p.lead { margin:0 0 1rem; font-size:.88rem; color:var(--muted); max-width:60ch; }

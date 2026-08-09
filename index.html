@@ -105,6 +105,21 @@
   .checks { display:grid; gap:.5rem; }
   .chk { display:flex; align-items:center; gap:.55rem; font-size:.9rem; }
   .chk input { width:1.15rem; height:1.15rem; accent-color: var(--accent); }
+
+  /* Fingerfreundliche Bedienelemente auf Touchgeraeten: der Schieberegler war nur
+     16 px hoch, Chips und Kaestchen unter 32 px - fuer den Daumen zu wenig. */
+  @media (pointer: coarse), (max-width: 880px) {
+    .rng input[type=range]{ height:44px; }
+    .rng input[type=range]::-webkit-slider-thumb { width:26px; height:26px; }
+    .rng input[type=range]::-moz-range-thumb { width:26px; height:26px; }
+    .tchip, .preset { min-height:40px; padding-inline:.85rem; }
+    .chk { min-height:44px; }
+    .chk input { width:1.5rem; height:1.5rem; }
+    .sortbar select { min-height:44px; padding:.5rem .6rem; }
+    .reset { min-height:46px; }
+    .viewnav-here, .viewnav-go { min-height:44px; }
+    .theme-btn { width:44px; height:44px; }
+  }
   .reset { appearance:none; border:1px solid var(--line-2); background:var(--surface-2); color:var(--ink); font:inherit; font-weight:600; padding:.55rem; border-radius:9px; cursor:pointer; }
   .reset:hover { background:var(--line); }
 
