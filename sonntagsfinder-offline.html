@@ -91,6 +91,26 @@
   .filters::-webkit-scrollbar { width: 8px; }
   .filters::-webkit-scrollbar-thumb { background: var(--line); border-radius: 4px; }
   @media (max-width: 880px){ .filters { position:static; max-height:none; overflow:visible; } }
+
+  /* Auf schmalen Schirmen ist das Filterpanel fast einen ganzen Handybildschirm
+     hoch – die ersten Ziele lägen dadurch unter der Falz. Deshalb dort
+     eingeklappt starten und über einen Knopf öffnen. */
+  .filter-toggle { display:none; }
+  @media (max-width: 880px) {
+    .filter-toggle {
+      display:flex; align-items:center; gap:.5rem; width:100%; min-height:48px;
+      appearance:none; font:inherit; font-weight:650; cursor:pointer; text-align:left;
+      background:var(--surface); color:var(--ink); border:1px solid var(--line-2);
+      border-radius:var(--r); padding:.6rem .9rem; box-shadow:var(--shadow);
+    }
+    .filter-toggle .arr { margin-left:auto; transition: transform .15s ease; }
+    .filter-toggle[aria-expanded="true"] .arr { transform: rotate(180deg); }
+    .filter-toggle .anz {
+      font-size:.75rem; font-weight:700; padding:.1rem .5rem; border-radius:999px;
+      background:var(--accent); color:#fff;
+    }
+    .filters[hidden] { display:none; }
+  }
   .filters h2 { margin:0; font-size:.82rem; text-transform:uppercase; letter-spacing:.09em; color:var(--muted); }
   .field { display:grid; gap:.35rem; }
   .field label { font-size:.85rem; font-weight:650; }
@@ -106,20 +126,6 @@
   .chk { display:flex; align-items:center; gap:.55rem; font-size:.9rem; }
   .chk input { width:1.15rem; height:1.15rem; accent-color: var(--accent); }
 
-  /* Fingerfreundliche Bedienelemente auf Touchgeraeten: der Schieberegler war nur
-     16 px hoch, Chips und Kaestchen unter 32 px - fuer den Daumen zu wenig. */
-  @media (pointer: coarse), (max-width: 880px) {
-    .rng input[type=range]{ height:44px; }
-    .rng input[type=range]::-webkit-slider-thumb { width:26px; height:26px; }
-    .rng input[type=range]::-moz-range-thumb { width:26px; height:26px; }
-    .tchip, .preset { min-height:40px; padding-inline:.85rem; }
-    .chk { min-height:44px; }
-    .chk input { width:1.5rem; height:1.5rem; }
-    .sortbar select { min-height:44px; padding:.5rem .6rem; }
-    .reset { min-height:46px; }
-    .viewnav-here, .viewnav-go { min-height:44px; }
-    .theme-btn { width:44px; height:44px; }
-  }
   .reset { appearance:none; border:1px solid var(--line-2); background:var(--surface-2); color:var(--ink); font:inherit; font-weight:600; padding:.55rem; border-radius:9px; cursor:pointer; }
   .reset:hover { background:var(--line); }
 
@@ -208,8 +214,40 @@
   footer.site a { color:var(--accent-2); }
   .disclaimer { background:var(--check-soft); border:1px solid color-mix(in srgb, var(--check) 25%, transparent); border-radius:10px; padding:.7rem .9rem; font-size:.82rem; color:var(--ink-2); }
 
+  /* Fingerfreundliche Bedienelemente auf Touchgeräten: der Schieberegler war nur
+     16 px hoch, Chips und Kästchen unter 32 px – für den Daumen zu wenig.
+     Steht bewusst am Ende, damit diese Regeln die allgemeinen Chip- und
+     Feldstile überschreiben statt von ihnen überschrieben zu werden. */
+  @media (pointer: coarse), (max-width: 880px) {
+    .rng input[type=range]{ height:44px; }
+    .rng input[type=range]::-webkit-slider-thumb { width:26px; height:26px; }
+    .rng input[type=range]::-moz-range-thumb { width:26px; height:26px; }
+    .tchip, .preset { min-height:40px; padding-inline:.85rem; }
+    .chk { min-height:44px; }
+    .chk input { width:1.5rem; height:1.5rem; }
+    /* Unter 16 px Schriftgröße zoomt iOS beim Antippen in die Seite hinein und
+       kommt nicht von selbst zurück. */
+    .sortbar select { min-height:44px; padding:.5rem .6rem; font-size:16px; }
+    .field input, .field select { font-size:16px; }
+    .reset { min-height:46px; }
+    .viewnav-here, .viewnav-go { min-height:44px; }
+    .theme-btn { width:44px; height:44px; }
+  }
+
+  /* Neuigkeiten und Ampel-Erklärung schoben auf dem Handy die erste Karte unter
+     die Falz. Beide bleiben erhalten, rutschen aber unter die Ergebnisse. */
+  @media (max-width: 880px) {
+    #results { display:flex; flex-direction:column; }
+    .results-head { order:1; }
+    .sortbar { order:2; }
+    #grid { order:3; }
+    #empty { order:4; }
+    #news { order:5; margin-top:1.6rem; }
+    .explain { order:6; }
+  }
+
   @media print {
-    .filters, .sortbar, .theme-btn, .nav-link, .viewnav, .presets, .explain, .skip, .tally { display:none !important; }
+    .filters, .sortbar, .theme-btn, .nav-link, .viewnav, .presets, .explain, .skip, .tally, .filter-toggle { display:none !important; }
     header.site { background:none; border:0; }
     .hero { padding-bottom:.5rem; }
     .layout { grid-template-columns:1fr; }
@@ -5306,7 +5344,7 @@
   "note": "Kuratierte, zeitlich begrenzte Hinweise (Sonderöffnungen, Feste, Sonderausstellungen). Jeder Eintrag braucht valid_until (ISO-Datum) – abgelaufene Einträge blendet die Website automatisch aus. Felder: title, locality, date_text, valid_until, url, note. Beispiel siehe README.",
   "events": []
 }
-; window.EMBEDDED_BUILD = "2026-08-09";</script>
+; window.EMBEDDED_BUILD = "2026-08-10";</script>
 
 <a class="skip" href="#results">Direkt zu den Ergebnissen</a>
 
@@ -5343,6 +5381,11 @@
   </div>
 
   <div class="layout" id="layout" hidden>
+    <button type="button" class="filter-toggle" id="filterToggle" aria-expanded="false" aria-controls="filters">
+      <span aria-hidden="true">🔎</span> <span id="filterToggleText">Filter und Suche</span>
+      <span class="anz" id="filterToggleAnz" hidden></span>
+      <span class="arr" aria-hidden="true">▾</span>
+    </button>
     <form class="filters" id="filters" role="search" aria-label="Ausflüge filtern">
       <h2>Filter</h2>
       <div class="presets" role="group" aria-label="Schnellfilter (zum Aufheben erneut tippen)">
@@ -5813,6 +5856,48 @@ function readState(str){
       try { localStorage.removeItem("sf-state"); } catch(e){}
       apply();
     });
+    // Filterpanel auf schmalen Schirmen einklappen. Der Knopf zeigt an, wie viele
+    // Filter gesetzt sind – ein zugeklappter, unbemerkt aktiver Filter wäre sonst
+    // die schlechtere Falle als der lange Scrollweg.
+    const schmal = () => window.matchMedia("(max-width: 880px)").matches;
+    const FILTER_STD = { q:"", rad:"120", bp:"10", bg:"120", gs:"8", env:"", tier:"", dur:"" };
+    function aktiveFilter() {
+      let n = 0;
+      Object.keys(FILTER_STD).forEach(id => { if (String($(id).value) !== FILTER_STD[id]) n++; });
+      ["sun","acc","free"].forEach(id => { if ($(id).checked) n++; });
+      n += activeThemes.size;
+      return n;
+    }
+    function filterKnopfAktualisieren() {
+      const n = aktiveFilter();
+      const anz = $("filterToggleAnz");
+      anz.textContent = n;
+      anz.hidden = n === 0;
+      anz.title = n === 1 ? "1 Filter gesetzt" : n + " Filter gesetzt";
+      $("filterToggleText").textContent = $("filters").hidden ? "Filter und Suche" : "Filter schließen";
+    }
+    function filterUmschalten(auf) {
+      $("filters").hidden = !auf;
+      $("filterToggle").setAttribute("aria-expanded", String(auf));
+      filterKnopfAktualisieren();
+    }
+    $("filterToggle").addEventListener("click", () => filterUmschalten($("filters").hidden));
+    $("filters").addEventListener("input", filterKnopfAktualisieren);
+    $("filters").addEventListener("change", filterKnopfAktualisieren);
+    $("filters").addEventListener("click", () => setTimeout(filterKnopfAktualisieren, 0));
+    // Nur bei echtem Wechsel zwischen schmal und breit umschalten: Auf dem Handy
+    // löst schon das Einblenden der Tastatur ein Resize aus – das darf den Filter
+    // nicht unter den Fingern zuklappen.
+    let warSchmal = schmal();
+    const zustandPruefen = () => {
+      const jetzt = schmal();
+      if (jetzt !== warSchmal) { warSchmal = jetzt; filterUmschalten(!jetzt); }
+    };
+    const mq = window.matchMedia("(max-width: 880px)");
+    if (mq.addEventListener) mq.addEventListener("change", zustandPruefen); else mq.addListener(zustandPruefen);
+    window.addEventListener("resize", zustandPruefen);
+    filterUmschalten(!schmal());
+
     document.querySelectorAll(".preset").forEach(b => b.addEventListener("click", () => {
       const def = PRESETS[b.dataset.p];
       if (!def) return;

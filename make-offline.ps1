@@ -1,4 +1,4 @@
-# Erzeugt die Offline-Ausgabe: zwei doppelklickbare Dateien mit eingebettetem
+﻿# Erzeugt die Offline-Ausgabe: zwei doppelklickbare Dateien mit eingebettetem
 # Katalog - laufen ohne Server und ohne Internet.
 #
 #   sonntagsfinder-offline.html           = Ausflugs-Bibliothek (Hauptseite)
